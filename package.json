@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "storybook": "start-storybook -p 6006 -s ./src",
+    "build-storybook": "build-storybook -s src"
   },
   "dependencies": {
     "next": "12.2.2",
@@ -20,6 +22,11 @@
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
+    "@storybook/addons": "^6.5.9",
+    "@storybook/builder-webpack5": "^6.5.9",
+    "@storybook/manager-webpack5": "^6.5.9",
+    "@storybook/react": "^6.5.9",
+    "@storybook/testing-library": "^0.0.13",
     "@types/node": "18.0.6",
     "@types/react": "18.0.15",
     "@types/react-dom": "18.0.6",
