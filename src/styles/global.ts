@@ -4,11 +4,11 @@ export const GlobalStyle = createGlobalStyle`
   :root {
     /*=========== Colors ===========*/
     --darkest-blue-color: hsla(244, 62%, 15%, 1);
-    --bg-grey-color: 	hsl(214, 41%, 97%);
+    --bg-grey-color: hsl(214, 41%, 97%);
     --white-color: hsl(0, 0%, 100%);
     --text-black-color: hsl(0, 0%, 0%);
-    --text-grey-color: 	hsl(0, 0%, 59%);
-    --card-blue-color: 	hsl(216, 90%, 65%);
+    --text-grey-color: hsl(0, 0%, 59%);
+    --card-blue-color: hsl(216, 90%, 65%);
 
     /*=========== Font Size ===========*/
     --biggest-font-size: 2.5rem;

@@ -1,5 +1,7 @@
 import React from 'react'
 import { SEO } from '../SEO'
+import { CardsWrapper } from '../components/CardsWrapper'
+import { Graphic } from '../components/Graphic'
 const Home: React.FC = () => {
   return (
     <>
@@ -7,9 +9,8 @@ const Home: React.FC = () => {
         title="Wheater App"
         description="The website consumes a Weather Weather API that informs the weather conditions in a certain region."
       />
-      <div>
-        <h1>Oi, amigo!</h1>
-      </div>
+      <Graphic />
+      <CardsWrapper />
     </>
   )
 }
