@@ -1,13 +1,14 @@
-import type { AppProps } from "next/app";
-import { GlobalStyle } from "../styles/global";
+import React from 'react'
+import { AppProps } from 'next/app'
+import { GlobalStyle } from '../styles/global'
 
-function MyApp({ Component, pageProps }: AppProps) {
+const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <>
       <Component {...pageProps} />
       <GlobalStyle />
     </>
-  );
+  )
 }
 
-export default MyApp;
+export default MyApp

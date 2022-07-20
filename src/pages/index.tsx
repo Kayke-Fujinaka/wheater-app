@@ -1,6 +1,6 @@
-import React from "react";
-import { SEO } from "../SEO";
-const Home = () => {
+import React from 'react'
+import { SEO } from '../SEO'
+const Home: React.FC = () => {
   return (
     <>
       <SEO
@@ -11,7 +11,7 @@ const Home = () => {
         <h1>Oi, amigo!</h1>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
