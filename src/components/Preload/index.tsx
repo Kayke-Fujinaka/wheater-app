@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Container } from './styles'
-const img = require('../../assets/cloud.svg')
+import img from '../../assets/cloud.svg'
 
 export function Preload() {
   return (
