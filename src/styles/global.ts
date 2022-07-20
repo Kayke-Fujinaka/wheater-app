@@ -16,6 +16,8 @@ export const GlobalStyle = createGlobalStyle`
     --big-font-size: 1.5rem;
     --medium-font-size: 1.2rem;
     --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --tooSmall-font-size: .6875rem;
 
     /*=========== Font Weight ===========*/
     --light: 300;
