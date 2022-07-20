@@ -5,6 +5,8 @@ import { Container } from './styles'
 export const CardsWrapper: React.FC = () => {
   const [isActive, setIsActive] = useState(false)
 
+  const cards = [1, 2, 3, 4]
+
   const handleClick = () => {
     setIsActive(current => !current)
   }
@@ -12,38 +14,21 @@ export const CardsWrapper: React.FC = () => {
   return (
     <>
       <Container>
-        <DayCard
-          id="1"
-          style={{
-            backgroundColor: isActive ? 'hsl(216, 90%, 65%)' : 'hsl(0, 0%, 0%)',
-            color: isActive ? 'hsl(0, 0%, 100%)' : 'hsl(0, 0%, 59%)'
-          }}
-          onClick={handleClick}
-        />
-        <DayCard
-          id="2"
-          style={{
-            backgroundColor: isActive ? 'hsl(216, 90%, 65%)' : 'hsl(0, 0%, 0%)',
-            color: isActive ? 'hsl(0, 0%, 100%)' : 'hsl(0, 0%, 59%)'
-          }}
-          onClick={handleClick}
-        />
-        <DayCard
-          id="3"
-          style={{
-            backgroundColor: isActive ? 'hsl(216, 90%, 65%)' : 'hsl(0, 0%, 0%)',
-            color: isActive ? 'hsl(0, 0%, 100%)' : 'hsl(0, 0%, 59%)'
-          }}
-          onClick={handleClick}
-        />
-        <DayCard
-          id="4"
-          style={{
-            backgroundColor: isActive ? 'hsl(216, 90%, 65%)' : 'hsl(0, 0%, 0%)',
-            color: isActive ? 'hsl(0, 0%, 100%)' : 'hsl(0, 0%, 59%)'
-          }}
-          onClick={handleClick}
-        />
+        {cards.map(card => {
+          return (
+            <DayCard
+              key={card}
+              style={{
+                backgroundColor: isActive
+                  ? 'hsl(216, 90%, 65%)'
+                  : 'hsl(0, 0%, 0%)',
+                color: isActive ? 'hsl(0, 0%, 100%)' : 'hsl(0, 0%, 59%)'
+              }}
+              active={isActive}
+              onClick={handleClick}
+            />
+          )
+        })}
       </Container>
     </>
   )
