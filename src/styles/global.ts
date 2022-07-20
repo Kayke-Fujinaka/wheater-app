@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
   :root {
@@ -9,11 +9,12 @@ export const GlobalStyle = createGlobalStyle`
     --text-black-color: hsl(0, 0%, 0%);
     --text-grey-color: 	hsl(0, 0%, 59%);
     --card-blue-color: 	hsl(216, 90%, 65%);
-    --blue: hsl(236, 80%, 57%);
 
     /*=========== Font Size ===========*/
-    --bigger-font-size: 2.25rem;
+    --biggest-font-size: 2.5rem;
+    --bigger-font-size: 2rem;
     --big-font-size: 1.5rem;
+    --medium-font-size: 1.2rem;
     --normal-font-size: 1rem;
 
     /*=========== Font Weight ===========*/
@@ -83,4 +84,4 @@ export const GlobalStyle = createGlobalStyle`
     opacity: 0.6;
     cursor: not-allowed;
   }
-`;
+`

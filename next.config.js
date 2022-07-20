@@ -3,8 +3,11 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   compiler: {
-    styledComponents: true,
+    styledComponents: true
   }
 }
+
+const withImages = require('next-images')
+module.exports = withImages()
 
 module.exports = nextConfig
