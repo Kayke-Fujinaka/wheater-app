@@ -10,7 +10,8 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 8.5rem;
+  width: 10rem;
+  height: 10em;
   padding-block: 1rem 1.25rem;
   border-radius: 0.1875rem;
   user-select: none;
