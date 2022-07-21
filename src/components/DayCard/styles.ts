@@ -1,5 +1,10 @@
 import styled from 'styled-components'
 
+export interface CardsProps {
+  bgColor?: string
+  color?: string
+}
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -8,6 +13,7 @@ export const Container = styled.div`
   width: 8.5rem;
   padding-block: 1rem 1.25rem;
   border-radius: 0.1875rem;
+  user-select: none;
   cursor: pointer;
   h1 {
     font-size: var(--normal-font-size);
