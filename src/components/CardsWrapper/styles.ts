@@ -6,8 +6,7 @@ export const Container = styled.div`
   align-items: center;
 
   .default {
- 
-   background-color: #ededed;
+    background-color: #ededed;
     &.active {
       background-color: var(--card-blue-color);
       color: var(--white-color);

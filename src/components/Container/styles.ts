@@ -12,24 +12,22 @@ export const ContainerDiv = styled.div`
   border-radius: 0.6rem;
   opacity: 1;
 
-  @media (max-width: 970px){
+  @media (max-width: 970px) {
     flex-direction: column;
     align-items: center;
     height: 60rem;
-    width:90%;
+    width: 90%;
     margin: 2rem auto;
-    div:last-child{
+    div:last-child {
       display: flex;
       flex-wrap: wrap;
-      justify-content:center;
+      justify-content: center;
     }
   }
-  @media (max-width: 732px){
+  @media (max-width: 732px) {
     height: 80rem;
-
   }
-  @media (max-width: 364px){
+  @media (max-width: 364px) {
     height: 95rem;
-
   }
 `
