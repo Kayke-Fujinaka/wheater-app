@@ -1,7 +1,9 @@
 import Image from 'next/image'
+import { Search } from '../Search'
 import * as S from './styles'
 export const DescriptionDay: React.FC = () => (
   <S.Container>
+     <Search />
     <S.Description>
       <h3>15:40, terça-feira, 19 de junho, 2022</h3>
       <S.ImageAling>

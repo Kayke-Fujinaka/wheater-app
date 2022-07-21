@@ -4,12 +4,12 @@ import { Container } from '../components/Container'
 const Home: React.FC = () => {
   return (
     <>
-      <Container>
         <SEO
           title="Wheater App"
           description="The website consumes a Weather Weather API that informs the weather conditions in a certain region."
         />
-        <Search />
+       
+      <Container>
         <DescriptionDay />
         <Graphic />
         <CardsWrapper />
