@@ -8,10 +8,7 @@ export const ContainerDiv = styled.div`
   justify-content: space-around;
   align-items: center;
   background: #ffffff;
-  box-shadow: 0rem .25rem .25rem rgba(0, 0, 0, 0.25);
-  border-radius: .3125rem;
-  background-color:#ededed;
-  div:last-child {
-    
-  }
+  box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+  border-radius: 0.3125rem;
+  background-color: #ededed;
 `
