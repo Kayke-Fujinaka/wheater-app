@@ -7,7 +7,7 @@ export const CardsWrapper: React.FC = () => {
 
   const cards = [1, 2, 3, 4]
 
-  const handleClick = () => {
+  const onChange = () => {
     setIsActive(current => !current)
   }
 
@@ -24,8 +24,7 @@ export const CardsWrapper: React.FC = () => {
                   : 'hsl(0, 0%, 0%)',
                 color: isActive ? 'hsl(0, 0%, 100%)' : 'hsl(0, 0%, 59%)'
               }}
-              active={isActive}
-              onClick={handleClick}
+              onClick={onChange}
             />
           )
         })}

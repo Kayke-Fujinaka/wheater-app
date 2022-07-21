@@ -6,18 +6,13 @@ interface dayCardProps {
     backgroundColor: string | undefined
     color: string | undefined
   }
-  active: boolean
   onClick: () => void
 }
 
 export const DayCard = (props: dayCardProps) => {
   return (
     <>
-      <Container
-        style={props.style}
-        active={props.active}
-        onClick={props.onClick}
-      >
+      <Container style={props.style} onClick={props.onClick}>
         <h1>Hoje</h1>
         <Image
           src={'/images/broken-clouds-day.svg'}
