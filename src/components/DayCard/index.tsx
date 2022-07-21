@@ -1,14 +1,13 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import Image from 'next/image'
 import { Container } from './styles'
 
-interface dayCardProps {
+export interface DayCardProps {
   className: string
   day: string
   onClick: () => void
 }
 
-export const DayCard = (props: dayCardProps) => {
+const DayCard = (props: DayCardProps) => {
   return (
     <>
       <Container className={props.className} onClick={props.onClick}>
@@ -25,3 +24,5 @@ export const DayCard = (props: dayCardProps) => {
     </>
   )
 }
+
+export default DayCard

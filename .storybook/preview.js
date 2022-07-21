@@ -15,7 +15,7 @@ export const decorators = [
   (Story) => (
     <>
       <GlobalStyle />
-      {Story()}
+      <Story />
     </>
   ),
 ];
