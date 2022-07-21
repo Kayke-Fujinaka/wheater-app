@@ -4,10 +4,12 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 35.25rem;
-  height: 18rem;
+  width: 98%;
+  height: 15rem;
   background: var(--text-grey-color);
   border-radius: 0.3125rem;
+  margin: 0 auto;
+  margin-bottom: 1.25rem;
   p {
     font-size: var(--big-font-size);
     font-weight: var(--bold);

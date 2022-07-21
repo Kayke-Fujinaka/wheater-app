@@ -2,11 +2,11 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   display: flex;
-  gap: 0.425rem;
+  gap: 1rem;
+  align-items: center;
 
   .default {
-    background-color: var(--text-black-color);
-    color: var(--text-grey-color);
+    background-color: #ededed;
     &.active {
       background-color: var(--card-blue-color);
       color: var(--white-color);
