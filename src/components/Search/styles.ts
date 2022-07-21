@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.div`
   display: flex;
   align-items: center;
+  margin-bottom: 60px;
   h3 {
     font-weight: var(--normal);
     font-size: var(---medium-font-size);
@@ -17,6 +18,7 @@ export const Container = styled.div`
     background: #ffffff;
     border: 0.0313rem solid #979797;
     border-radius: 0.3125rem;
+   
     :focus {
       outline: none;
     }

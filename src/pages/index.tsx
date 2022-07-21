@@ -11,8 +11,10 @@ const Home: React.FC = () => {
 
       <Container>
         <DescriptionDay />
+        <div>
         <Graphic />
         <CardsWrapper />
+        </div>
       </Container>
     </>
   )

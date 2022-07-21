@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   max-width: 300px;
+  margin-bottom: 20px;
 `
 
 export const Description = styled.div`
@@ -25,7 +26,7 @@ export const ImageAling = styled.div`
   gap: 1.25rem;
 `
 export const Footer = styled.div`
-  margin-top: 2.0625rem;
+  margin-top: 100px;
   display: flex;
   justify-content: center;
   gap: 1.875rem;
