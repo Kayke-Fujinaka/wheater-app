@@ -1,19 +1,15 @@
 /* eslint-disable react/require-default-props */
-import Head from "next/head";
+import Head from 'next/head'
 
 interface SEOProps {
-  title: string;
-  description?: string;
-  shouldExcludeTitleSuffix?: boolean;
-  shouldIndexPage?: boolean;
+  title: string
+  description?: string
+  shouldExcludeTitleSuffix?: boolean
+  shouldIndexPage?: boolean
 }
 
-export function SEO({
-  title,
-  description,
-  shouldIndexPage = true,
-}: SEOProps) {
-  const pageTitle = `${title}`;
+export function SEO({ title, description, shouldIndexPage = true }: SEOProps) {
+  const pageTitle = `${title}`
 
   return (
     <Head>
@@ -45,5 +41,5 @@ export function SEO({
 
       <link rel="shortcut icon" href="favicon.png" type="image/png" />
     </Head>
-  );
+  )
 }

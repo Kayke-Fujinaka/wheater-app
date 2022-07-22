@@ -7,7 +7,7 @@ export const DescriptionDay: React.FC = () => (
     <S.Description>
       <h3>15:40, terça-feira, 19 de junho, 2022</h3>
       <S.ImageAling>
-        <Image src="/images/overcast-clouds.svg" width="47" height="30" />
+        <Image src={'/images/overcast-clouds.svg'} width="47" height="30" />
         <h1>18°C</h1>
       </S.ImageAling>
       <h1>Nublado</h1>
