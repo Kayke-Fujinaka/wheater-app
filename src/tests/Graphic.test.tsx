@@ -1,4 +1,3 @@
-/* eslint-disable react/no-children-prop */
 import React from 'react'
 import { render } from '@testing-library/react'
 import { Graphic } from '../components/Graphic'
