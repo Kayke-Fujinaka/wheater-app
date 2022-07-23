@@ -33,4 +33,17 @@ describe('Search Test', () => {
     fireEvent.change(searchInput, { target: { value: 'São Paulo' } })
     expect(searchInput.value).toBe('São Paulo')
   })
+
+  test('Testing if the name attribute has the value "search"', () => {
+    const { queryByPlaceholderText } = render(
+      <Search
+        name="search"
+        id="search"
+        type="search"
+        placeholder="Insira uma Cidade"
+      />
+    )
+    const getInput = queryByPlaceholderText('Insira uma Cidade')
+    expect(getInput).toHaveAttribute('name', 'search')
+  })
 })
