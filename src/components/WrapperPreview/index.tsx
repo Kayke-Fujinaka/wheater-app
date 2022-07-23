@@ -1,8 +1,8 @@
-import { useState } from 'react'
-import { DayCard } from '../DayCard'
+import React, { useState } from 'react'
+import { WheaterPreview } from '../WheaterPreview'
 import { Container } from './styles'
 
-export const CardsWrapper: React.FC = () => {
+export const WrapperPreview = () => {
   const [isActive, setIsActive] = useState(0)
 
   const cards = [
@@ -33,7 +33,7 @@ export const CardsWrapper: React.FC = () => {
       <Container>
         {cards.map(card => {
           return (
-            <DayCard
+            <WheaterPreview
               day={card.dia}
               key={card.id}
               className={isActive === card.id ? 'default active' : 'default'}

@@ -1,31 +1,7 @@
-import React, { useEffect, useState } from 'react'
 import { SEO } from '../SEO'
-import { CardsWrapper, Graphic, DescriptionDay } from '../components'
+import { WrapperPreview, Graphic, WheaterStats } from '../components'
 import { Container } from '../components/Container'
-import weatherApi from '../API/index'
-
 const Home = () => {
-  const [wheater, setwheater] = useState([])
-  // eslint-disable-next-line prefer-const
-  let arr = []
-  useEffect(() => {
-    async function loadwheater() {
-      const response = await weatherApi.get('current.json?', {
-        params: {
-          key: '37083693771e4a40adf145739222207',
-          q: 'Salvador',
-          aqi: 'yes'
-        }
-      })
-      setwheater(response.data)
-    }
-    loadwheater()
-  }, [])
-
-  arr.push(wheater)
-  JSON.stringify(arr)
-  console.log(wheater)
-
   return (
     <>
       <SEO
@@ -34,18 +10,10 @@ const Home = () => {
       />
 
       <Container>
-        <DescriptionDay />
+        <WheaterStats />
         <div>
           <Graphic />
-          <CardsWrapper />
-          {wheater.map(idx => {
-            return (
-              <article key={idx.location}>
-                <strong>{idx.name}</strong>
-                <img src={`${idx.current}`} alt={idx.current} />
-              </article>
-            )
-          })}
+          <WrapperPreview />
         </div>
       </Container>
     </>

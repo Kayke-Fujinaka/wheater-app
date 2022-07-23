@@ -5,15 +5,17 @@ export const Container = styled.div`
   margin-bottom: 1.25rem;
 `
 
-export const Description = styled.div`
+export const Stats = styled.div`
   text-align: center;
-  h3 {
+
+  h1 {
     margin-bottom: 2.125rem;
     font-weight: var(--normal);
     font-size: var(--normal-font-size);
     color: var(--text-grey-color);
   }
-  h1 {
+
+  h2 {
     font-weight: var(--bold);
     font-size: var(--bigger-font-size);
   }
@@ -31,14 +33,18 @@ export const Footer = styled.div`
   justify-content: center;
   gap: 1.875rem;
   text-align: center;
-  h3 {
-    font-weight: var(--normal);
-    font-size: var(--normal-font-size);
-    color: var(--text-grey-color);
-  }
+
+  h3,
   p {
     font-weight: var(--normal);
     font-size: var(--normal-font-size);
+  }
+
+  h3 {
+    color: var(--text-grey-color);
+  }
+
+  p {
     color: var(--text-black-color);
   }
 `

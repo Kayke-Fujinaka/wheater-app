@@ -10,11 +10,12 @@ export const Container = styled.div`
     font-size: var(---medium-font-size);
     color: var(--text-black-color);
   }
+
   input {
     margin-left: 0.3125rem;
     padding: 0.25rem;
     font-size: var(---medium-font-size);
-    width: 9em;
+    width: 10rem;
     height: 1.75rem;
     background: #ffffff;
     border: 0.0313rem solid #979797;
@@ -24,12 +25,15 @@ export const Container = styled.div`
       outline: none;
     }
   }
+
   @media (max-width: 970px) {
     flex-direction: column;
+
     input {
       width: 90%;
       margin-top: 20px;
     }
+
     h3 {
       font-size: var(--big-font-size);
     }
