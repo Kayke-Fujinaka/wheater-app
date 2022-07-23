@@ -1,17 +1,16 @@
-const ReactDocgenTypescriptPlugin =
-  require("react-docgen-typescript-plugin").default;
-
 module.exports = {
-  stories: ["../src/components/**/*.stories.tsx"],
-  addons: [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@storybook/addon-interactions",
-    'storybook-addon-next'
+  stories: [
+    '../src/stories/**/*.stories.mdx',
+    '../src/stories/**/*.stories.@(js|jsx|ts|tsx)'
   ],
-  framework: "@storybook/react",
+  staticDirs: ['../public'],
+  addons: [
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    '@storybook/addon-interactions'
+  ],
+  framework: '@storybook/react',
   core: {
-    builder: "@storybook/builder-webpack5",
-  },
-  plugins: [new ReactDocgenTypescriptPlugin()],
-};
+    builder: '@storybook/builder-webpack5'
+  }
+}

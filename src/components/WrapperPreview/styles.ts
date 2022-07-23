@@ -7,6 +7,7 @@ export const Container = styled.div`
 
   .default {
     background-color: #ededed;
+
     &.active {
       background-color: var(--card-blue-color);
       color: var(--white-color);

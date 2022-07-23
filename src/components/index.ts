@@ -1,5 +1,5 @@
 export { Search } from './Search'
-export { DescriptionDay } from './DescriptionDay'
-export { CardsWrapper } from './CardsWrapper'
+export { WheaterStats } from './WheaterStats'
+export { WrapperPreview } from './WrapperPreview'
 export { Graphic } from './Graphic'
-export { DayCard } from './DayCard'
+export { WheaterPreview } from './WheaterPreview'

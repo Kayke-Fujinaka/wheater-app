@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+import React from 'react'
 import Image from 'next/image'
 import { Container } from './styles'
 
@@ -8,7 +8,7 @@ interface dayCardProps {
   onClick: () => void
 }
 
-export const DayCard = (props: dayCardProps) => {
+export const WheaterPreview = (props: dayCardProps) => {
   return (
     <>
       <Container className={props.className} onClick={props.onClick}>
@@ -19,8 +19,8 @@ export const DayCard = (props: dayCardProps) => {
           width={50}
           height={50}
         />
-        <p>Umidade</p>
-        <h3>45%</h3>
+        <h3>Umidade</h3>
+        <p>45%</p>
       </Container>
     </>
   )

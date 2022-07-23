@@ -1,21 +1,21 @@
 {
   "compilerOptions": {
-    "strict": true, // Modo de lidar com erros
-    "noEmit": true, // Caso execute o build da aplicação ele não emitirá o código
-    "allowJs": true, // Ter um aplicação contendo tanto arquivos JS quanto TS
-    "jsx": "preserve", // Entender que vai escrever HTML dentro do JS
-    "skipLibCheck": true,
-    "isolatedModules": true,
-    "esModuleInterop": true,
-    "resolveJsonModule": true, // Possibilidade de importar arquivos JSON
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "lib": ["DOM", "DOM.Iterable", "ESNext"], // Ele adiciona alguma funcionalidades. Exemplo: Entende que vai estar lidando com a DOM.
-    "forceConsistentCasingInFileNames": true,
     "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
     "incremental": true,
-    "module": "esnext"
+    "esModuleInterop": true,
+    "module": "esnext",
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "jsx": "preserve"
   },
-  "include": ["src", "setup.ts", "src/custom.d.ts"], // Onde o código da aplicação vai estar
-  "exclude": ["node_modules"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "jest.config.js"],
+  "exclude": ["node_modules"],
+  "types": ["node", "jest", "@testing-library/jest-dom"],
 }

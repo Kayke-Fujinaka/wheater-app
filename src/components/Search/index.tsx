@@ -1,7 +1,22 @@
+import React from 'react'
 import { Container } from './styles'
-export const Search: React.FC = () => (
+
+export interface InputSearchProps {
+  htmlFor: string
+  name: string
+  id: string
+  type: string
+  placeholder: string
+}
+
+export const Search = (props: InputSearchProps) => (
   <Container>
-    <h3>Cidade</h3>
-    <input type="search" placeholder="Insira cidade" />
+    <label htmlFor={props.htmlFor}>Cidade</label>
+    <input
+      name={props.name}
+      id={props.id}
+      type={props.type}
+      placeholder={props.placeholder}
+    />
   </Container>
 )

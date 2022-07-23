@@ -1,3 +1,4 @@
+import React from 'react'
 import { ContainerDiv } from './styles'
 export type ContainerProps = {
   children: React.ReactNode
