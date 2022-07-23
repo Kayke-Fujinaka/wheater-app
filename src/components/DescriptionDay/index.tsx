@@ -1,14 +1,17 @@
 import Image from 'next/image'
 import { Search } from '../Search'
 import * as S from './styles'
-export const DescriptionDay: React.FC = () => (
+interface Description {
+  celcius: any
+}
+export const DescriptionDay = ({ celcius }: Description) => (
   <S.Container>
     <Search />
     <S.Description>
       <h3>15:40, terça-feira, 19 de junho, 2022</h3>
       <S.ImageAling>
         <Image src={'/images/overcast-clouds.svg'} width="47" height="30" />
-        <h1>18°C</h1>
+        <h1>{celcius}</h1>
       </S.ImageAling>
       <h1>Nublado</h1>
     </S.Description>

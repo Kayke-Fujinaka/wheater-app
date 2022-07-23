@@ -1,10 +1,8 @@
 import React from 'react'
 import { Container } from './styles'
 
-export const Graphic: React.FC = () => {
-  return (
-    <Container>
-      <p>Gráfico</p>
-    </Container>
-  )
-}
+export const Graphic: React.FC = () => (
+  <Container>
+    <p>Gráfico</p>
+  </Container>
+)
