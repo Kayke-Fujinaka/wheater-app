@@ -1,43 +1,25 @@
-import { useState } from 'react'
+import { Key, useState, ReactNode, useContext } from 'react'
+import { WeatherContext } from '../../contexts/weather'
 import { DayCard } from '../DayCard'
+
 import { Container } from './styles'
+interface cardsWrapperProps {
+  cards: any
+}
 
-export const CardsWrapper: React.FC = () => {
-  const [isActive, setIsActive] = useState(0)
-
-  const cards = [
-    {
-      id: 1,
-      dia: 'Hoje'
-    },
-    {
-      id: 2,
-      dia: '22 de julho de 2022'
-    },
-    {
-      id: 3,
-      dia: '23 de julho de 2022'
-    },
-    {
-      id: 4,
-      dia: '24 de julho de 2022'
-    }
-  ]
-
-  const changeColor = (id: number) => {
-    setIsActive(id)
-  }
-
+export const CardsWrapper = ({ cards }: cardsWrapperProps) => {
+  const { changeIndex, cardActive } = useContext(WeatherContext)
   return (
     <>
       <Container>
-        {cards.map(card => {
+        {cards?.map((card: any, index: number) => {
           return (
             <DayCard
-              day={card.dia}
-              key={card.id}
-              className={isActive === card.id ? 'default active' : 'default'}
-              onClick={() => changeColor(card.id)}
+              day={card.day}
+              key={index}
+              humidity={card.humidity}
+              className={cardActive === index ? 'default active' : 'default'}
+              onClick={() => changeIndex(index)}
             />
           )
         })}

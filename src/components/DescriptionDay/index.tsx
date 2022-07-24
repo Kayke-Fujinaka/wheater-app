@@ -4,12 +4,13 @@ import { Search } from '../Search'
 import * as S from './styles'
 
 interface DescriptionDayProps {
-  temperatureCelcius: ReactNode
-  humidity: ReactNode
-  wind: ReactNode
+  temperatureCelcius: any
+  humidity: string
+  wind: string
   location?: string
-  conditions?: ReactNode
+  conditions?: string
 }
+
 export const DescriptionDay = ({
   temperatureCelcius,
   humidity,
