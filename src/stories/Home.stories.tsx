@@ -3,7 +3,7 @@ import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 import Home from '../pages/index'
 
 export default {
-  title: 'Components/Home',
+  title: 'Pages/Home',
   component: Home,
   parameters: {
     layout: 'fullscreen',
