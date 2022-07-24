@@ -14,7 +14,12 @@ export const WheaterStats = () => (
     <S.Stats>
       <h1>15:40, terça-feira, 19 de junho, 2022</h1>
       <S.ImageAling>
-        <Image src="/images/overcast-clouds.svg" width="47" height="30" />
+        <Image
+          src="/images/overcast-clouds.svg"
+          alt="Wheater Icon"
+          width="47"
+          height="30"
+        />
         <h2>18°C</h2>
       </S.ImageAling>
       <h2>Nublado</h2>
