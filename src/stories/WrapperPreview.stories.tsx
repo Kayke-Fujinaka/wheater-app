@@ -20,10 +20,8 @@ Default.decorators = [
   Story => (
     <div
       style={{
-        background: 'hsl(0, 0%, 59%)',
         display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center'
+        justifyContent: 'center'
       }}
     >
       {Story()}
