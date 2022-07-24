@@ -13,7 +13,7 @@ export default {
     backgrounds: {
       values: [
         {
-          name: 'bgColor',
+          name: 'backgroundColor',
           value: 'var(--darkest-blue-color)'
         }
       ]
@@ -25,7 +25,7 @@ const Template: ComponentStory<typeof Graphic> = () => <Graphic />
 
 export const Default = Template.bind({})
 Default.parameters = {
-  backgrounds: { default: 'bgColor' }
+  backgrounds: { default: 'backgroundColor' }
 }
 
 export const Mobile = Template.bind({})
@@ -33,5 +33,5 @@ Mobile.parameters = {
   viewport: {
     defaultViewport: 'iphonex'
   },
-  backgrounds: { default: 'bgColor' }
+  backgrounds: { default: 'backgroundColor' }
 }
