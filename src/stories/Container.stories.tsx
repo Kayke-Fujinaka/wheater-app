@@ -29,18 +29,6 @@ export const Default = Template.bind({})
 Default.parameters = {
   backgrounds: { default: 'bgColor' }
 }
-Default.decorators = [
-  Story => (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center'
-      }}
-    >
-      {Story()}
-    </div>
-  )
-]
 
 export const Mobile = Template.bind({})
 Mobile.parameters = {
