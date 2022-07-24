@@ -14,7 +14,7 @@ export default {
       values: [
         {
           name: 'bgColor',
-          value: 'var(--bg-grey-color)'
+          value: 'var(--text-grey-color)'
         }
       ]
     }
