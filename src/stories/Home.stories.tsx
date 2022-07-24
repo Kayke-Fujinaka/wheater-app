@@ -3,7 +3,7 @@ import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 import Home from '../pages/index'
 
 export default {
-  title: 'Components/Home',
+  title: 'Pages/Home',
   component: Home,
   parameters: {
     layout: 'fullscreen',
@@ -16,17 +16,10 @@ export default {
 const Template: ComponentStory<typeof Home> = () => <Home />
 
 export const Default = Template.bind({})
-Default.decorators = [
-  Story => (
-    <div
-      style={{
-        background: 'hsl(0, 0%, 59%)',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center'
-      }}
-    >
-      {Story()}
-    </div>
-  )
-]
+
+export const Mobile = Template.bind({})
+Mobile.parameters = {
+  viewport: {
+    defaultViewport: 'iphonex'
+  }
+}

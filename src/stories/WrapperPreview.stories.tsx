@@ -9,6 +9,14 @@ export default {
     layout: 'fullscreen',
     viewport: {
       viewports: INITIAL_VIEWPORTS
+    },
+    backgrounds: {
+      values: [
+        {
+          name: 'bgColor',
+          value: 'var(--text-grey-color)'
+        }
+      ]
     }
   }
 } as ComponentMeta<typeof WrapperPreview>
@@ -16,17 +24,26 @@ export default {
 const Template: ComponentStory<typeof WrapperPreview> = () => <WrapperPreview />
 
 export const Default = Template.bind({})
+Default.parameters = {
+  backgrounds: { default: 'bgColor' }
+}
 Default.decorators = [
   Story => (
     <div
       style={{
-        background: 'hsl(0, 0%, 59%)',
         display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center'
+        justifyContent: 'center'
       }}
     >
       {Story()}
     </div>
   )
 ]
+
+export const Mobile = Template.bind({})
+Mobile.parameters = {
+  viewport: {
+    defaultViewport: 'iphonex'
+  },
+  backgrounds: { default: 'bgColor' }
+}

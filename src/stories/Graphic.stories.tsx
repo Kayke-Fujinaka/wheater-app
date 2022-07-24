@@ -16,14 +16,10 @@ export default {
 const Template: ComponentStory<typeof Graphic> = () => <Graphic />
 
 export const Default = Template.bind({})
-Default.decorators = [
-  Story => (
-    <div
-      style={{
-        background: 'hsl(0, 0%, 59%)'
-      }}
-    >
-      {Story()}
-    </div>
-  )
-]
+
+export const Mobile = Template.bind({})
+Mobile.parameters = {
+  viewport: {
+    defaultViewport: 'iphonex'
+  }
+}
