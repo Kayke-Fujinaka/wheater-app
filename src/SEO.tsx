@@ -6,6 +6,7 @@ interface SEOProps {
   description?: string
   shouldExcludeTitleSuffix?: boolean
   shouldIndexPage?: boolean
+  onKeyPress?: void
 }
 
 export function SEO({ title, description, shouldIndexPage = true }: SEOProps) {

@@ -1,28 +1,40 @@
 import Image from 'next/image'
+import { ReactNode } from 'react'
 import { Search } from '../Search'
 import * as S from './styles'
-interface Description {
-  celcius: any
+
+interface DescriptionDayProps {
+  temperatureCelcius: ReactNode
+  humidity: ReactNode
+  wind: ReactNode
+  location?: string
+  conditions?: ReactNode
 }
-export const DescriptionDay = ({ celcius }: Description) => (
+export const DescriptionDay = ({
+  temperatureCelcius,
+  humidity,
+  wind,
+  location,
+  conditions
+}: DescriptionDayProps) => (
   <S.Container>
-    <Search />
+    <Search location={location} />
     <S.Description>
       <h3>15:40, terça-feira, 19 de junho, 2022</h3>
       <S.ImageAling>
         <Image src={'/images/overcast-clouds.svg'} width="47" height="30" />
-        <h1>{celcius}</h1>
+        <h1>{temperatureCelcius}</h1>
       </S.ImageAling>
-      <h1>Nublado</h1>
+      <h1>{conditions}</h1>
     </S.Description>
     <S.Footer>
       <div>
         <h3>Umidade</h3>
-        <p>45%</p>
+        <p>{humidity}%</p>
       </div>
       <div>
         <h3>Velocidade do Vento</h3>
-        <p>20km/h</p>
+        <p> {wind}km/h</p>
       </div>
     </S.Footer>
   </S.Container>
