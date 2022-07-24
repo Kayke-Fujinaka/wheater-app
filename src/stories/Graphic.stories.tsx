@@ -9,14 +9,6 @@ export default {
     layout: 'fullscreen',
     viewport: {
       viewports: INITIAL_VIEWPORTS
-    },
-    backgrounds: {
-      values: [
-        {
-          name: 'backgroundColor',
-          value: 'var(--darkest-blue-color)'
-        }
-      ]
     }
   }
 } as ComponentMeta<typeof Graphic>
@@ -24,14 +16,10 @@ export default {
 const Template: ComponentStory<typeof Graphic> = () => <Graphic />
 
 export const Default = Template.bind({})
-Default.parameters = {
-  backgrounds: { default: 'backgroundColor' }
-}
 
 export const Mobile = Template.bind({})
 Mobile.parameters = {
   viewport: {
     defaultViewport: 'iphonex'
-  },
-  backgrounds: { default: 'backgroundColor' }
+  }
 }
