@@ -6,6 +6,7 @@ import { WeatherContext } from '../contexts/weather'
 
 const Home = () => {
   const { days, cardActive } = useContext(WeatherContext)
+
   return (
     <>
       <SEO
@@ -13,14 +14,13 @@ const Home = () => {
         description="The website consumes a Weather Weather API that informs the weather conditions in a certain region."
       />
       <Container>
-        <form>
-          <WheaterStats
-            temperatureCelcius={days[cardActive]?.temp}
-            wind={days[cardActive]?.wind}
-            humidity={days[cardActive]?.humidity}
-            conditions={days[cardActive]?.condition}
-          />
-        </form>
+        <WheaterStats
+          temperatureCelcius={days[cardActive]?.temp}
+          wind={days[cardActive]?.wind}
+          humidity={days[cardActive]?.humidity}
+          conditions={days[cardActive]?.condition}
+        />
+
         <div>
           <Graphic />
           <WrapperPreview cards={days} />

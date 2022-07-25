@@ -1,32 +1,46 @@
-import React from 'react'
 import Image from 'next/image'
 import { Container } from './styles'
 
-interface dayCardProps {
+interface WheaterPreviewProps {
+  conditions: any
   className: string
   day: string
   humidity: number
   onClick: () => void
 }
 
-export const WheaterPreview = ({
-  className,
-  onClick,
-  day,
-  humidity
-}: dayCardProps) => {
+export const WheaterPreview = (props: WheaterPreviewProps) => {
+  function imageConditionRender() {
+    switch (props.conditions) {
+      case 'Poucas nuvens':
+        return <Image src="/scatteredClouds.svg" width="47" height="30" />
+      case 'Nuvens dispersas':
+        return <Image src="/scatteredClouds.svg" width="47" height="30" />
+      case 'Céu limpo':
+        return <Image src="/sun.svg" width="47" height="30" />
+      case 'Tempestade com chuva':
+        return <Image src="/storm.svg" width="47" height="30" />
+      case 'Chuva fraca':
+        return <Image src="/rain.svg" width="47" height="30" />
+      case 'Chuva forte':
+        return <Image src="/rain.svg" width="47" height="30" />
+      case 'Chuva moderada':
+        return <Image src="/rain.svg" width="47" height="30" />
+      case 'Nuvens quebradas':
+        return <Image src="/scatteredClouds.svg" width="47" height="30" />
+      case 'Tempestade com chuva forte':
+        return <Image src="/storm.svg" width="47" height="30" />
+      default:
+        return <Image src="/cloud.svg" width="47" height="30" />
+    }
+  }
   return (
     <>
-      <Container className={className} onClick={onClick}>
-        <h1>{day}</h1>
-        <Image
-          src={'/images/broken-clouds-day.svg'}
-          alt="Wheater Icon"
-          width={50}
-          height={50}
-        />
+      <Container className={props.className} onClick={props.onClick}>
+        <h1>{props.day}</h1>
+        {imageConditionRender()}
         <p>Umidade</p>
-        <h3>{humidity}%</h3>
+        <h3>{props.humidity}%</h3>
       </Container>
     </>
   )

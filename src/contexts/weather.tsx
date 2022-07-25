@@ -1,64 +1,86 @@
-import { ReactNode, createContext, useState, useEffect } from 'react'
+import {
+  ReactNode,
+  createContext,
+  useState,
+  useEffect,
+  SetStateAction,
+  Dispatch
+} from 'react'
 import weatherApi from '../API'
 
-export const WeatherContext = createContext<WeatherContextData>(
-  {} as WeatherContextData
+export const WeatherContext = createContext<iWeatherContextData>(
+  {} as iWeatherContextData
 )
 
-interface WeatherContextData {
-  days: any
+interface iWeatherContextData {
+  days: iDaysData[]
   changeIndex: (index: number) => void
-  cardActive: any
+  cardActive: number
+  setLocationValue: Dispatch<SetStateAction<string>>
+  locationValue: string
 }
-
-interface WeatherProviderProps {
+export interface iDaysData {
+  humidity: number
+  day: string
+  temp: number
+  wind: number
+  condition: string
+}
+interface iWeatherProviderProps {
   children: ReactNode
 }
 
-export default function WeatherProvider({ children }: WeatherProviderProps) {
+export default function WeatherProvider({ children }: iWeatherProviderProps) {
   const [wheater, setWheater] = useState([])
   const [cardActive, setCardActive] = useState(0)
-  const [days, setDays] = useState([])
-
+  const [days, setDays] = useState<iDaysData[]>([])
+  const [locationValue, setLocationValue] = useState('São Paulo')
   const changeIndex = (index: number) => {
     setCardActive(index)
-    console.log(index)
   }
 
   async function loadWheater() {
     await weatherApi
       .get('data', {
         params: {
-          key: 'c8a7131811c04489b3b21dfff10b6f9c',
+          key: 'cc2ac1d511234aa1a6e63c24ea3c1c77',
           lang: 'pt',
-          days: 5,
-          city: 'São Paulo'
+          days: 4,
+          city: locationValue
         }
       })
       .then(res => {
         setWheater(res.data)
 
-        const array: any = []
-        res.data.data.forEach((item: any) => {
-          const data = {
-            humidity: item.rh,
-            day: item.datetime,
-            temp: item.temp,
-            wind: item.wind_spd,
-            condition: item.weather.description
+        const daysData: iDaysData[] = []
+        res.data.data.forEach(
+          (item: {
+            rh: number
+            datetime: string
+            temp: number
+            wind_spd: number
+            weather: { description: string }
+          }) => {
+            const data = {
+              humidity: item.rh,
+              day: item.datetime,
+              temp: item.temp,
+              wind: item.wind_spd,
+              condition: item.weather.description
+            }
+            daysData.push(data)
           }
-
-          array.push(data)
-          console.log(res.data)
-        })
-        setDays(array)
+        )
+        setDays(daysData)
       })
   }
   useEffect(() => {
     loadWheater()
-  }, [])
+  }, [locationValue])
   return (
-    <WeatherContext.Provider value={{ days, changeIndex, cardActive }}>
+    <WeatherContext.Provider
+      value={{ days, changeIndex, cardActive, setLocationValue, locationValue }}
+    >
       {children}
     </WeatherContext.Provider>
   )

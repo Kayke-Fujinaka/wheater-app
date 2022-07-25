@@ -1,49 +1,67 @@
-import React from 'react'
 import Image from 'next/image'
 import { Search } from '../Search'
 import * as S from './styles'
 
-interface WheaterStatsProps {
-  temperatureCelcius: any
-  humidity: string
-  wind: string
-  location?: string
-  conditions?: string
+interface iWheaterStatsProps {
+  temperatureCelcius: number
+  humidity: number
+  wind: number
+  location?: any
+  conditions: string
 }
+export const WheaterStats = (props: iWheaterStatsProps) => {
+  function imageConditionRender() {
+    switch (props.conditions) {
+      case 'Poucas nuvens':
+        return <Image src="/scatteredClouds.svg" width="47" height="30" />
+      case 'Nuvens dispersas':
+        return <Image src="/scatteredClouds.svg" width="47" height="30" />
+      case 'Céu limpo':
+        return <Image src="/sun.svg" width="47" height="30" />
+      case 'Tempestade com chuva':
+        return <Image src="/storm.svg" width="47" height="30" />
+      case 'Chuva fraca':
+        return <Image src="/rain.svg" width="47" height="30" />
+      case 'Chuva forte':
+        return <Image src="/rain.svg" width="47" height="30" />
+      case 'Chuva moderada':
+        return <Image src="/rain.svg" width="47" height="30" />
+      case 'Nuvens quebradas':
+        return <Image src="/scatteredClouds.svg" width="47" height="30" />
+      case 'Tempestade com chuva forte':
+        return <Image src="/storm.svg" width="47" height="30" />
+      default:
+        return <Image src="/cloud.svg" width="47" height="30" />
+    }
+  }
 
-export const WheaterStats = ({
-  temperatureCelcius,
-  humidity,
-  wind,
-  location,
-  conditions
-}: WheaterStatsProps) => (
-  <S.Container>
-    <Search
-      htmlFor="label"
-      name="search"
-      id="search"
-      type="search"
-      placeholder="Insira uma Cidade"
-      location={location}
-    />
-    <S.Stats>
-      <h3>15:40, terça-feira, 19 de junho, 2022</h3>
-      <S.ImageAling>
-        <Image src={'/images/overcast-clouds.svg'} width="47" height="30" />
-        <h1>{temperatureCelcius}</h1>
-      </S.ImageAling>
-      <h1>{conditions}</h1>
-    </S.Stats>
-    <S.Footer>
-      <div>
-        <h3>Umidade</h3>
-        <p>{humidity}%</p>
-      </div>
-      <div>
-        <h3>Velocidade do Vento</h3>
-        <p> {wind}km/h</p>
-      </div>
-    </S.Footer>
-  </S.Container>
-)
+  return (
+    <S.Container>
+      <Search
+        htmlFor="label"
+        name="search"
+        id="search"
+        type="search"
+        placeholder="Insira uma Cidade"
+      />
+      <S.Stats>
+        <h3>tem que arrumar</h3>
+        <S.ImageAling>
+          {imageConditionRender()}
+          <h2>{Math.floor(props.temperatureCelcius)}°C</h2>
+        </S.ImageAling>
+        <h2>{props.conditions}</h2>
+      </S.Stats>
+      <S.Footer>
+        <div>
+          <h3>Umidade</h3>
+          <p>{props.humidity} %</p>
+        </div>
+        <div>
+          <h3>Velocidade do Vento</h3>
+          <p> {Math.floor(props.wind * 3.6)} km/h</p>
+        </div>
+      </S.Footer>
+    </S.Container>
+  )
+}

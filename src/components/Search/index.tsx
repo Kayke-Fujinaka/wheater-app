@@ -1,4 +1,5 @@
-import React from 'react'
+import { useContext, useState } from 'react'
+import { WeatherContext } from '../../contexts/weather'
 import { Container } from './styles'
 
 interface SearchProps {
@@ -6,19 +7,30 @@ interface SearchProps {
   name: string
   id: string
   type: string
-  location?: string
   placeholder: string
 }
-export const Search = (props: SearchProps) => (
-  <Container>
-    <label htmlFor={props.htmlFor}>Cidade</label>
-    <input
-      name={props.name}
-      id={props.id}
-      type={props.type}
-      placeholder={props.placeholder}
-      ref={props.location}
-      autoComplete="on"
-    />
-  </Container>
-)
+
+export function Search(props: SearchProps) {
+  const { setLocationValue } = useContext(WeatherContext)
+  const [inputValue, setInputValue] = useState('São Paulo')
+  function handleSubmit(e: { key: string }) {
+    if (e.key === 'Enter') {
+      setLocationValue(inputValue)
+    }
+  }
+  return (
+    <Container>
+      <label htmlFor={props.htmlFor}>Cidade</label>
+
+      <input
+        name={props.name}
+        id={props.id}
+        type={props.type}
+        placeholder={props.placeholder}
+        onChange={e => setInputValue(e.target.value)}
+        value={inputValue}
+        onKeyPress={handleSubmit}
+      />
+    </Container>
+  )
+}
