@@ -38,8 +38,8 @@ Nesse desafio, você deve construir um site que mostrará o clima em lugares pel
 :heavy_check_mark: Storybook dos componentes\
 :heavy_check_mark: Jest dos componentes\
 :heavy_check_mark: Consumo da API\
+:heavy_check_mark: Loading\
 
-:heavy_check_mark: Responsivo\
 :heavy_check_mark: Responsivo\
 :heavy_check_mark: Responsivo\
 :x: Projeto Finalizado
