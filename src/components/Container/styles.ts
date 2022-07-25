@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-
 export const ContainerDiv = styled.div`
   display: flex;
   width: 62.5rem;
