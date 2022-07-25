@@ -1,10 +1,10 @@
 import { useContext } from 'react'
-import { WeatherContext } from '../../contexts/weather'
+import { iDaysData, WeatherContext } from '../../contexts/weather'
 import { DayCard } from '../DayCard'
 
 import { Container } from './styles'
 interface cardsWrapperProps {
-  cards: []
+  cards: iDaysData[]
 }
 
 export const CardsWrapper = ({ cards }: cardsWrapperProps) => {
@@ -12,19 +12,17 @@ export const CardsWrapper = ({ cards }: cardsWrapperProps) => {
   return (
     <>
       <Container>
-        {cards?.map(
-          (card: { day: string; humidity: number }, index: number) => {
-            return (
-              <DayCard
-                day={card.day}
-                key={index}
-                humidity={card.humidity}
-                className={cardActive === index ? 'default active' : 'default'}
-                onClick={() => changeIndex(index)}
-              />
-            )
-          }
-        )}
+        {cards.map((card, index) => {
+          return (
+            <DayCard
+              day={card.day}
+              key={index}
+              humidity={card.humidity}
+              className={cardActive === index ? 'default active' : 'default'}
+              onClick={() => changeIndex(index)}
+            />
+          )
+        })}
       </Container>
     </>
   )

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import Image from 'next/image'
 import { Container } from './styles'
 
@@ -9,16 +8,11 @@ interface dayCardProps {
   onClick: () => void
 }
 
-export const DayCard = ({
-  className,
-  onClick,
-  day,
-  humidity
-}: dayCardProps) => {
+export const DayCard = (props: dayCardProps) => {
   return (
     <>
-      <Container className={className} onClick={onClick}>
-        <h1>{day}</h1>
+      <Container className={props.className} onClick={props.onClick}>
+        <h1>{props.day}</h1>
         <Image
           src={'/images/broken-clouds-day.svg'}
           alt="Wheater Icon"
@@ -26,7 +20,7 @@ export const DayCard = ({
           height={50}
         />
         <p>Umidade</p>
-        <h3>{humidity}%</h3>
+        <h3>{props.humidity}%</h3>
       </Container>
     </>
   )
