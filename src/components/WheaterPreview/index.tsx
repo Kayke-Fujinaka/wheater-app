@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+import React from 'react'
 import Image from 'next/image'
 import { Container } from './styles'
 
@@ -9,7 +9,7 @@ interface dayCardProps {
   onClick: () => void
 }
 
-export const DayCard = ({
+export const WheaterPreview = ({
   className,
   onClick,
   day,

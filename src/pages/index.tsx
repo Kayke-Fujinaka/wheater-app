@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { SEO } from '../SEO'
-import { CardsWrapper, Graphic, DescriptionDay } from '../components'
+import { WrapperPreview, Graphic, WheaterStats } from '../components'
 import { Container } from '../components/Container'
 import { WeatherContext } from '../contexts/weather'
 
@@ -14,7 +14,7 @@ const Home = () => {
       />
       <Container>
         <form>
-          <DescriptionDay
+          <WheaterStats
             temperatureCelcius={days[cardActive]?.temp}
             wind={days[cardActive]?.wind}
             humidity={days[cardActive]?.humidity}
@@ -23,7 +23,7 @@ const Home = () => {
         </form>
         <div>
           <Graphic />
-          <CardsWrapper cards={days} />
+          <WrapperPreview cards={days} />
         </div>
       </Container>
     </>

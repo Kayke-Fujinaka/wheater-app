@@ -1,15 +1,23 @@
+import React from 'react'
 import { Container } from './styles'
 
 interface SearchProps {
+  htmlFor: string
+  name: string
+  id: string
+  type: string
   location?: string
+  placeholder: string
 }
-export const Search = ({ location }: SearchProps) => (
+export const Search = (props: SearchProps) => (
   <Container>
-    <h3>Cidade</h3>
+    <label htmlFor={props.htmlFor}>Cidade</label>
     <input
-      type="search"
-      ref={location}
-      placeholder="Insira cidade"
+      name={props.name}
+      id={props.id}
+      type={props.type}
+      placeholder={props.placeholder}
+      ref={props.location}
       autoComplete="on"
     />
   </Container>

@@ -39,7 +39,6 @@ export default function WeatherProvider({ children }: WeatherProviderProps) {
         setWheater(res.data)
 
         const array: any = []
-        // desconstrução das informações da api.
         res.data.data.forEach((item: any) => {
           const data = {
             humidity: item.rh,

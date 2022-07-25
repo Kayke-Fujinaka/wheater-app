@@ -1,9 +1,9 @@
+import React from 'react'
 import Image from 'next/image'
-import { ReactNode } from 'react'
 import { Search } from '../Search'
 import * as S from './styles'
 
-interface DescriptionDayProps {
+interface WheaterStatsProps {
   temperatureCelcius: any
   humidity: string
   wind: string
@@ -11,23 +11,30 @@ interface DescriptionDayProps {
   conditions?: string
 }
 
-export const DescriptionDay = ({
+export const WheaterStats = ({
   temperatureCelcius,
   humidity,
   wind,
   location,
   conditions
-}: DescriptionDayProps) => (
+}: WheaterStatsProps) => (
   <S.Container>
-    <Search location={location} />
-    <S.Description>
+    <Search
+      htmlFor="label"
+      name="search"
+      id="search"
+      type="search"
+      placeholder="Insira uma Cidade"
+      location={location}
+    />
+    <S.Stats>
       <h3>15:40, terça-feira, 19 de junho, 2022</h3>
       <S.ImageAling>
         <Image src={'/images/overcast-clouds.svg'} width="47" height="30" />
         <h1>{temperatureCelcius}</h1>
       </S.ImageAling>
       <h1>{conditions}</h1>
-    </S.Description>
+    </S.Stats>
     <S.Footer>
       <div>
         <h3>Umidade</h3>

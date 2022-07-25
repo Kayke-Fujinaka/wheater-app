@@ -1,20 +1,20 @@
-import { Key, useState, ReactNode, useContext } from 'react'
+import { useContext } from 'react'
 import { WeatherContext } from '../../contexts/weather'
-import { DayCard } from '../DayCard'
+import { WheaterPreview } from '../WheaterPreview'
 
 import { Container } from './styles'
 interface cardsWrapperProps {
   cards: any
 }
 
-export const CardsWrapper = ({ cards }: cardsWrapperProps) => {
+export const WrapperPreview = ({ cards }: cardsWrapperProps) => {
   const { changeIndex, cardActive } = useContext(WeatherContext)
   return (
     <>
       <Container>
         {cards?.map((card: any, index: number) => {
           return (
-            <DayCard
+            <WheaterPreview
               day={card.day}
               key={index}
               humidity={card.humidity}
