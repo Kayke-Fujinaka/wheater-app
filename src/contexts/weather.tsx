@@ -1,28 +1,27 @@
 import { ReactNode, createContext, useState, useEffect } from 'react'
 import weatherApi from '../API'
 
-export const WeatherContext = createContext<WeatherContextData>(
-  {} as WeatherContextData
+export const WeatherContext = createContext<iWeatherContextData>(
+  {} as iWeatherContextData
 )
 
-interface WeatherContextData {
-  days: any
+interface iWeatherContextData {
+  days: object
   changeIndex: (index: number) => void
   cardActive: any
 }
 
-interface WeatherProviderProps {
+interface iWeatherProviderProps {
   children: ReactNode
 }
 
-export default function WeatherProvider({ children }: WeatherProviderProps) {
+export default function WeatherProvider({ children }: iWeatherProviderProps) {
   const [wheater, setWheater] = useState([])
   const [cardActive, setCardActive] = useState(0)
   const [days, setDays] = useState([])
 
   const changeIndex = (index: number) => {
     setCardActive(index)
-    console.log(index)
   }
 
   async function loadWheater() {

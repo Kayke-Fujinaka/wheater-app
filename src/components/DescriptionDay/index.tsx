@@ -1,14 +1,13 @@
 import Image from 'next/image'
-import { ReactNode } from 'react'
 import { Search } from '../Search'
 import * as S from './styles'
 
 interface DescriptionDayProps {
-  temperatureCelcius: any
-  humidity: string
-  wind: string
-  location?: string
-  conditions?: string
+  temperatureCelcius: number
+  humidity: number
+  wind: number
+  location: string
+  conditions: string
 }
 
 export const DescriptionDay = ({
@@ -31,11 +30,11 @@ export const DescriptionDay = ({
     <S.Footer>
       <div>
         <h3>Umidade</h3>
-        <p>{humidity}%</p>
+        <p>{humidity} %</p>
       </div>
       <div>
         <h3>Velocidade do Vento</h3>
-        <p> {wind}km/h</p>
+        <p> {Math.floor(wind * 3.6)} km/h</p>
       </div>
     </S.Footer>
   </S.Container>
