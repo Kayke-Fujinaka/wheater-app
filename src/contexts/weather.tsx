@@ -8,7 +8,7 @@ export const WeatherContext = createContext<iWeatherContextData>(
 interface iWeatherContextData {
   days: object
   changeIndex: (index: number) => void
-  cardActive: any
+  cardActive: number
 }
 
 interface iWeatherProviderProps {
@@ -37,21 +37,27 @@ export default function WeatherProvider({ children }: iWeatherProviderProps) {
       .then(res => {
         setWheater(res.data)
 
-        const array: any = []
+        const descontrutionData: any = []
         // desconstrução das informações da api.
-        res.data.data.forEach((item: any) => {
-          const data = {
-            humidity: item.rh,
-            day: item.datetime,
-            temp: item.temp,
-            wind: item.wind_spd,
-            condition: item.weather.description
+        res.data.data.forEach(
+          (item: {
+            rh: number
+            datetime: string
+            temp: number
+            wind_spd: number
+            weather: { description: string }
+          }) => {
+            const data = {
+              humidity: item.rh,
+              day: item.datetime,
+              temp: item.temp,
+              wind: item.wind_spd,
+              condition: item.weather.description
+            }
+            descontrutionData.push(data)
           }
-
-          array.push(data)
-          console.log(res.data)
-        })
-        setDays(array)
+        )
+        setDays(descontrutionData)
       })
   }
   useEffect(() => {
