@@ -2,14 +2,14 @@ import Image from 'next/image'
 import { Search } from '../Search'
 import * as S from './styles'
 
-interface iDescriptionDayProps {
+interface iWheaterStatsProps {
   temperatureCelcius: number
   humidity: number
   wind: number
   location?: any
   conditions: string
 }
-export const DescriptionDay = (props: iDescriptionDayProps) => {
+export const WheaterStats = (props: iWheaterStatsProps) => {
   function imageConditionRender() {
     switch (props.conditions) {
       case 'Poucas nuvens':
@@ -37,15 +37,21 @@ export const DescriptionDay = (props: iDescriptionDayProps) => {
 
   return (
     <S.Container>
-      <Search />
-      <S.Description>
+      <Search
+        htmlFor="label"
+        name="search"
+        id="search"
+        type="search"
+        placeholder="Insira uma Cidade"
+      />
+      <S.Stats>
         <h3>tem que arrumar</h3>
         <S.ImageAling>
           {imageConditionRender()}
-          <h1>{Math.floor(props.temperatureCelcius)}°C</h1>
+          <h2>{Math.floor(props.temperatureCelcius)}°C</h2>
         </S.ImageAling>
-        <h1>{props.conditions}</h1>
-      </S.Description>
+        <h2>{props.conditions}</h2>
+      </S.Stats>
       <S.Footer>
         <div>
           <h3>Umidade</h3>

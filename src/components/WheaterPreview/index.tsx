@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { Container } from './styles'
 
-interface dayCardProps {
+interface WheaterPreviewProps {
   conditions: any
   className: string
   day: string
@@ -9,7 +9,7 @@ interface dayCardProps {
   onClick: () => void
 }
 
-export const DayCard = (props: dayCardProps) => {
+export const WheaterPreview = (props: WheaterPreviewProps) => {
   function imageConditionRender() {
     switch (props.conditions) {
       case 'Poucas nuvens':

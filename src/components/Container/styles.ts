@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-
 export const ContainerDiv = styled.div`
   display: flex;
   width: 67rem;
@@ -18,15 +17,18 @@ export const ContainerDiv = styled.div`
     height: 60rem;
     width: 90%;
     margin: 2rem auto;
+
     div:last-child {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
     }
   }
+
   @media (max-width: 732px) {
     height: 80rem;
   }
+
   @media (max-width: 364px) {
     height: 95rem;
   }

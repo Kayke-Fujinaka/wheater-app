@@ -1,13 +1,13 @@
 import { useContext } from 'react'
 import { iDaysData, WeatherContext } from '../../contexts/weather'
-import { DayCard } from '../DayCard'
+import { WheaterPreview } from '../WheaterPreview'
 
 import { Container } from './styles'
 interface cardsWrapperProps {
   cards: iDaysData[]
 }
 
-export const CardsWrapper = ({ cards }: cardsWrapperProps) => {
+export const WrapperPreview = ({ cards }: cardsWrapperProps) => {
   const { changeIndex, cardActive } = useContext(WeatherContext)
   function formatDate(date: string) {
     const [day, preposition, month] = new Date(date)
@@ -26,7 +26,7 @@ export const CardsWrapper = ({ cards }: cardsWrapperProps) => {
       <Container>
         {cards.map((card, index) => {
           return (
-            <DayCard
+            <WheaterPreview
               day={formatDate(card.day)}
               key={index}
               humidity={card.humidity}
