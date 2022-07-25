@@ -31,6 +31,7 @@ export const CardsWrapper = ({ cards }: cardsWrapperProps) => {
               key={index}
               humidity={card.humidity}
               className={cardActive === index ? 'default active' : 'default'}
+              conditions={card.condition}
               onClick={() => changeIndex(index)}
             />
           )
