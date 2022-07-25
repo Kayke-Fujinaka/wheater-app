@@ -10,16 +10,16 @@ interface cardsWrapperProps {
 export const CardsWrapper = ({ cards }: cardsWrapperProps) => {
   const { changeIndex, cardActive } = useContext(WeatherContext)
   function formatDate(date: string) {
-    const [weekday, month, day] = new Date(date)
+    const [day, preposition, month] = new Date(date)
       .toLocaleDateString('pt-br', {
         month: 'long',
         day: 'numeric'
       })
       .split(' ')
-    const abbreviatedDayOfTheWeek = `${weekday.substring(0, 3)} `
-    const formattedDate = [abbreviatedDayOfTheWeek, day]
+    const abbreviatedDayOfTheWeek = `${day.substring(0, 3)} `
+    const formattedDate = [abbreviatedDayOfTheWeek, month]
 
-    return formattedDate.join('de ')
+    return formattedDate.join(`${preposition} `)
   }
   return (
     <>
