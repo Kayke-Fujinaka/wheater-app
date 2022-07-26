@@ -186,4 +186,18 @@ describe('WheaterPreview Test', () => {
     const getImage = getByAltText('Wheater Icon')
     expect(getImage).toHaveAttribute('src')
   })
+
+  test('Testing if get case "Nevando" in Wheater Preview', () => {
+    const { getByAltText } = render(
+      <WheaterPreview
+        conditions="Nevando"
+        humidity={12}
+        className="default"
+        day="hoje"
+        onClick={jest.fn()}
+      />
+    )
+    const getImage = getByAltText('Wheater Icon')
+    expect(getImage).toHaveAttribute('src')
+  })
 })
