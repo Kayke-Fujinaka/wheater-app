@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import { imageConditionRender } from '../ImageCondition'
 import { Search } from '../Search'
 import * as S from './styles'
 
@@ -10,31 +10,6 @@ interface iWheaterStatsProps {
   conditions: string
 }
 export const WheaterStats = (props: iWheaterStatsProps) => {
-  function imageConditionRender() {
-    switch (props.conditions) {
-      case 'Poucas nuvens':
-        return <Image src="/scatteredClouds.svg" width="47" height="30" />
-      case 'Nuvens dispersas':
-        return <Image src="/scatteredClouds.svg" width="47" height="30" />
-      case 'Céu limpo':
-        return <Image src="/sun.svg" width="47" height="30" />
-      case 'Tempestade com chuva':
-        return <Image src="/storm.svg" width="47" height="30" />
-      case 'Chuva fraca':
-        return <Image src="/rain.svg" width="47" height="30" />
-      case 'Chuva forte':
-        return <Image src="/rain.svg" width="47" height="30" />
-      case 'Chuva moderada':
-        return <Image src="/rain.svg" width="47" height="30" />
-      case 'Nuvens quebradas':
-        return <Image src="/scatteredClouds.svg" width="47" height="30" />
-      case 'Tempestade com chuva forte':
-        return <Image src="/storm.svg" width="47" height="30" />
-      default:
-        return <Image src="/cloud.svg" width="47" height="30" />
-    }
-  }
-
   return (
     <S.Container>
       <Search
@@ -47,7 +22,7 @@ export const WheaterStats = (props: iWheaterStatsProps) => {
       <S.Stats>
         <h3>tem que arrumar</h3>
         <S.ImageAling>
-          {imageConditionRender()}
+          {imageConditionRender(props)}
           <h2>{Math.floor(props.temperatureCelcius)}°C</h2>
         </S.ImageAling>
         <h2>{props.conditions}</h2>
