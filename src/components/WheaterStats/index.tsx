@@ -6,7 +6,7 @@ interface iWheaterStatsProps {
   temperatureCelcius: number
   humidity: number
   wind: number
-  location?: any
+  location?: string
   conditions: string
 }
 export const WheaterStats = (props: iWheaterStatsProps) => {

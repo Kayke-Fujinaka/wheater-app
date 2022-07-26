@@ -2,13 +2,12 @@ import Image from 'next/image'
 import { Container } from './styles'
 
 interface WheaterPreviewProps {
-  conditions: any
+  conditions: string
   className: string
   day: string
   humidity: number
   onClick: () => void
 }
-
 export const WheaterPreview = (props: WheaterPreviewProps) => {
   function imageConditionRender() {
     switch (props.conditions) {
