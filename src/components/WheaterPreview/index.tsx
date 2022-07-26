@@ -14,7 +14,7 @@ export const WheaterPreview = (props: WheaterPreviewProps) => {
     <>
       <Container className={props.className} onClick={props.onClick}>
         <h1>{props.day}</h1>
-        {imageConditionRender(props)}
+        {imageConditionRender({ condition: props.conditions })}
         <p>Umidade</p>
         <h3>{props.humidity}%</h3>
       </Container>
