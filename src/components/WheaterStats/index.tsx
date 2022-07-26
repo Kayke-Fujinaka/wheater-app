@@ -22,7 +22,7 @@ export const WheaterStats = (props: iWheaterStatsProps) => {
       <S.Stats>
         <h3>tem que arrumar</h3>
         <S.ImageAling>
-          {imageConditionRender(props)}
+          {imageConditionRender({ condition: props.conditions })}
           <h2>{Math.floor(props.temperatureCelcius)}°C</h2>
         </S.ImageAling>
         <h2>{props.conditions}</h2>
