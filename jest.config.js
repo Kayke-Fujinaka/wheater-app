@@ -9,7 +9,8 @@ module.exports = {
     '!src/API/index.ts',
     '!src/SEO.tsx',
     '!src/components/index.ts',
-    '!src/styles/global.ts'
+    '!src/styles/global.ts',
+    '!src/types'
   ],
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
   modulePath: ['<rootDir>/src/'],

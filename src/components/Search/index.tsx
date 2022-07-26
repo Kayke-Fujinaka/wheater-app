@@ -14,7 +14,9 @@ export function Search(props: SearchProps) {
   const { setLocationValue } = useContext(WeatherContext)
   const [inputValue, setInputValue] = useState('São Paulo')
   function handleSubmit(e: { key: string }) {
+    console.log('Estou aqui 1')
     if (e.key === 'Enter') {
+      console.log('Estou aqui 2')
       setLocationValue(inputValue)
     }
   }
