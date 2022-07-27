@@ -1,3 +1,4 @@
+/* eslint-disable multiline-ternary */
 import React from 'react'
 import { AppProps } from 'next/app'
 import { LoadingScreen } from '../components/Loading'
@@ -20,9 +21,9 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
           <React.Fragment>
             <Component {...pageProps} />
           </React.Fragment>
-            ) : (
+        ) : (
           <LoadingScreen />
-            )}
+        )}
       </WeatherProvider>
     </>
   )
