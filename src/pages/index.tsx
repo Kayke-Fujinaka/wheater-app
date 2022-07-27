@@ -1,11 +1,11 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { SEO } from '../SEO'
 import { WrapperPreview, Graphic, WheaterStats } from '../components'
 import { Container } from '../components/Container'
-import { WeatherContext } from '../contexts/weather'
+import { useWheater } from '../contexts/weather'
 
 const Home = () => {
-  const { days, cardActive } = useContext(WeatherContext)
+  const { days, cardActive } = useWheater()
 
   return (
     <>
