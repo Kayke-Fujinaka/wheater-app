@@ -5,7 +5,7 @@ export const Container = styled.div`
   justify-content: center;
 `
 
-export const Balls = styled.div`
+export const Img = styled.div`
   display: flex;
   justify-content: center;
   animation: oscillate 1.75s ease-in forwards infinite;
@@ -35,9 +35,9 @@ export const Progress = styled.div`
 
   .progress-value {
     animation: load 1s normal forwards;
-    box-shadow: 0 10px 40px -10px var(--white-color);
+    box-shadow: 0 10px 40px -10px #fbbf24;
     border-radius: 100px;
-    background: var(--white-color);
+    background: #fbbf24;
     height: 30px;
     width: 0;
 
