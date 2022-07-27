@@ -1,4 +1,5 @@
-import { iDaysData, useWheater } from '../../contexts/weather'
+import { useWheater } from '../../contexts/weather'
+import { iDaysData } from '../../types/WheaterApiResponse'
 import { formatDate } from '../../utils/formatDate'
 import { WheaterPreview } from '../WheaterPreview'
 
