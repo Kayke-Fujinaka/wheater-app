@@ -4,13 +4,22 @@ import {
   useState,
   useEffect,
   SetStateAction,
-  Dispatch
+  Dispatch,
+  useContext
 } from 'react'
 import weatherApi from '../API'
 
-export const WeatherContext = createContext<iWeatherContextData>(
-  {} as iWeatherContextData
-)
+interface iWeatherProviderProps {
+  children: ReactNode
+}
+
+export interface iDaysData {
+  humidity: number
+  day: string
+  temp: number
+  wind: number
+  condition: string
+}
 
 interface iWeatherContextData {
   days: iDaysData[]
@@ -19,16 +28,10 @@ interface iWeatherContextData {
   setLocationValue: Dispatch<SetStateAction<string>>
   locationValue: string
 }
-export interface iDaysData {
-  humidity: number
-  day: string
-  temp: number
-  wind: number
-  condition: string
-}
-interface iWeatherProviderProps {
-  children: ReactNode
-}
+
+const WeatherContext = createContext<iWeatherContextData>(
+  {} as iWeatherContextData
+)
 
 export default function WeatherProvider({ children }: iWeatherProviderProps) {
   const [wheater, setWheater] = useState([])
@@ -85,3 +88,5 @@ export default function WeatherProvider({ children }: iWeatherProviderProps) {
     </WeatherContext.Provider>
   )
 }
+
+export const useWheater = () => useContext(WeatherContext)

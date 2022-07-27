@@ -1,5 +1,5 @@
-import { useContext, useState } from 'react'
-import { WeatherContext } from '../../contexts/weather'
+import { useState } from 'react'
+import { useWheater } from '../../contexts/weather'
 import { Container } from './styles'
 
 interface SearchProps {
@@ -11,12 +11,10 @@ interface SearchProps {
 }
 
 export function Search(props: SearchProps) {
-  const { setLocationValue } = useContext(WeatherContext)
+  const { setLocationValue } = useWheater()
   const [inputValue, setInputValue] = useState('São Paulo')
   function handleSubmit(e: { key: string }) {
-    console.log('Estou aqui 1')
     if (e.key === 'Enter') {
-      console.log('Estou aqui 2')
       setLocationValue(inputValue)
     }
   }
