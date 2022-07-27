@@ -1,5 +1,6 @@
-import { useContext } from 'react'
-import { iDaysData, WeatherContext } from '../../contexts/weather'
+import { useWheater } from '../../contexts/weather'
+import { iDaysData } from '../../types/WheaterApiResponse'
+import { formatDate } from '../../utils/formatDate'
 import { WheaterPreview } from '../WheaterPreview'
 
 import { Container } from './styles'
@@ -8,19 +9,8 @@ interface cardsWrapperProps {
 }
 
 export const WrapperPreview = ({ cards }: cardsWrapperProps) => {
-  const { changeIndex, cardActive } = useContext(WeatherContext)
-  function formatDate(date: string) {
-    const [day, preposition, month] = new Date(date)
-      .toLocaleDateString('pt-br', {
-        month: 'long',
-        day: 'numeric'
-      })
-      .split(' ')
-    const abbreviatedDayOfTheWeek = `${day.substring(0, 3)} `
-    const formattedDate = [abbreviatedDayOfTheWeek, month]
+  const { changeIndex, cardActive } = useWheater()
 
-    return formattedDate.join(`${preposition} `)
-  }
   return (
     <>
       <Container>

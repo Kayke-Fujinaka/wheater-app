@@ -2,6 +2,10 @@ import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
 import { Search } from '../components/Search'
 
+jest.mock('../contexts/weather', () => ({
+  useWheater: () => ({ setLocationValue: jest.fn() })
+}))
+
 describe('Search Test', () => {
   test('Testing if it can get the "Cidade" text from the label in Search Component', () => {
     const { getByText } = render(<Search />)
@@ -45,5 +49,27 @@ describe('Search Test', () => {
     )
     const getInput = queryByPlaceholderText('Insira uma Cidade')
     expect(getInput).toHaveAttribute('name', 'search')
+  })
+
+  test('Input change', () => {
+    const { getByDisplayValue } = render(<Search />)
+    const valueInput = getByDisplayValue(/são paulo/i)
+
+    fireEvent.change(valueInput, {
+      target: { value: 'Belo Horizonte' }
+    })
+    fireEvent.keyPress(valueInput, { key: 'Enter', charCode: 13 })
+    expect(valueInput.value).toBe('Belo Horizonte')
+  })
+
+  test('Input change', () => {
+    const { getByDisplayValue } = render(<Search />)
+    const valueInput = getByDisplayValue(/são paulo/i)
+
+    fireEvent.change(valueInput, {
+      target: { value: 'Belo Horizonte' }
+    })
+    fireEvent.keyPress(valueInput, { key: 'a', charCode: 13 })
+    expect(valueInput.value).toBe('Belo Horizonte')
   })
 })

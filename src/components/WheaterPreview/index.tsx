@@ -2,7 +2,7 @@ import { imageConditionRender } from '../ImageCondition'
 import { Container } from './styles'
 
 interface WheaterPreviewProps {
-  conditions: any
+  conditions: string
   className: string
   day: string
   humidity: number
@@ -12,7 +12,11 @@ interface WheaterPreviewProps {
 export const WheaterPreview = (props: WheaterPreviewProps) => {
   return (
     <>
-      <Container className={props.className} onClick={props.onClick}>
+      <Container
+        data-testid={props.day}
+        className={props.className}
+        onClick={props.onClick}
+      >
         <h1>{props.day}</h1>
         {imageConditionRender({ condition: props.conditions })}
         <p>Umidade</p>
