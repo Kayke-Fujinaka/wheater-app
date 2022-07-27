@@ -10,10 +10,10 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 10rem;
+  width: 8.9rem;
   height: 10em;
   padding-block: 1rem 1.25rem;
-  border-radius: 0.1875rem;
+  border-radius: 0.4rem;
   user-select: none;
   cursor: pointer;
 

@@ -69,6 +69,7 @@ export default function WeatherProvider({ children }: iWeatherProviderProps) {
               condition: item.weather.description
             }
             daysData.push(data)
+            console.log(res)
           }
         )
         setDays(daysData)
@@ -77,6 +78,7 @@ export default function WeatherProvider({ children }: iWeatherProviderProps) {
   useEffect(() => {
     loadWheater()
   }, [locationValue])
+
   return (
     <WeatherContext.Provider
       value={{ days, changeIndex, cardActive, setLocationValue, locationValue }}
