@@ -1,7 +1,6 @@
 import { useContext } from 'react'
 import { iDaysData, WeatherContext } from '../../contexts/weather'
 import { WheaterPreview } from '../WheaterPreview'
-
 import { Container } from './styles'
 interface cardsWrapperProps {
   cards: iDaysData[]
