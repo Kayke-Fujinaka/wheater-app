@@ -1,23 +1,20 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  max-width: 18.75rem;
+  width: 20rem;
   margin-bottom: 1.25rem;
 `
 
 export const Stats = styled.div`
   text-align: center;
-
-  h1 {
-    margin-bottom: 2.125rem;
-    font-weight: var(--normal);
-    font-size: var(--normal-font-size);
-    color: var(--text-grey-color);
-  }
-
+  h1,
   h2 {
     font-weight: var(--bold);
-    font-size: var(--bigger-font-size);
+    font-size: var(--biggest-font-size);
+    color: var(--text-black-color);
+  }
+  h2 {
+    height: 90px;
   }
 `
 export const ImageAling = styled.div`
@@ -25,10 +22,10 @@ export const ImageAling = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: 2.0625rem;
-  gap: 1.25rem;
+  gap: 1rem;
 `
 export const Footer = styled.div`
-  margin-top: 6.25rem;
+  margin-top: 2rem;
   display: flex;
   justify-content: center;
   gap: 1.875rem;
