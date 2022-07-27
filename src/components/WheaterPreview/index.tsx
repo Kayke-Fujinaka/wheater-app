@@ -2,7 +2,7 @@ import { imageConditionRender } from '../ImageCondition'
 import { Container } from './styles'
 
 interface WheaterPreviewProps {
-  conditions: any
+  conditions: string
   className: string
   day: string
   humidity: number
