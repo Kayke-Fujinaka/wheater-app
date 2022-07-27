@@ -1,33 +1,10 @@
+import { createContext, useState, useEffect, useContext } from 'react'
 import {
-  ReactNode,
-  createContext,
-  useState,
-  useEffect,
-  SetStateAction,
-  Dispatch,
-  useContext
-} from 'react'
+  iWeatherProviderProps,
+  iDaysData,
+  iWeatherContextData
+} from '../types/WheaterApiResponse'
 import weatherApi from '../API'
-
-interface iWeatherProviderProps {
-  children: ReactNode
-}
-
-export interface iDaysData {
-  humidity: number
-  day: string
-  temp: number
-  wind: number
-  condition: string
-}
-
-interface iWeatherContextData {
-  days: iDaysData[]
-  changeIndex: (index: number) => void
-  cardActive: number
-  setLocationValue: Dispatch<SetStateAction<string>>
-  locationValue: string
-}
 
 const WeatherContext = createContext<iWeatherContextData>(
   {} as iWeatherContextData
