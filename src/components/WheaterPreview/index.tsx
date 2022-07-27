@@ -8,7 +8,6 @@ interface WheaterPreviewProps {
   humidity: number
   onClick: () => void
 }
-
 export const WheaterPreview = (props: WheaterPreviewProps) => {
   return (
     <>

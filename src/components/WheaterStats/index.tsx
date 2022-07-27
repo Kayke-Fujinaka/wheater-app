@@ -1,3 +1,5 @@
+import Image from 'next/image'
+import { CurrentDataTime } from '../CurrentDataTime'
 import { imageConditionRender } from '../ImageCondition'
 import { Search } from '../Search'
 import * as S from './styles'
@@ -19,7 +21,7 @@ export const WheaterStats = (props: iWheaterStatsProps) => {
         placeholder="Insira uma Cidade"
       />
       <S.Stats>
-        <h3>tem que arrumar</h3>
+        <CurrentDataTime />
         <S.ImageAling>
           {imageConditionRender({ condition: props.conditions })}
           <h2>{Math.floor(props.temperatureCelcius)}°C</h2>

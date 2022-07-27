@@ -23,6 +23,7 @@ const Home = () => {
 
         <div>
           <Graphic />
+
           <WrapperPreview cards={days} />
         </div>
       </Container>

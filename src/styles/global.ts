@@ -56,7 +56,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: var( --darkest-blue-color);
+    background-color: var( --bg-grey-color);
     -webkit-font-smoothing: antialiased;
   }
 
