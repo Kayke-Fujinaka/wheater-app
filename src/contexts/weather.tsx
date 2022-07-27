@@ -1,4 +1,10 @@
-import { createContext, useState, useEffect, useContext } from 'react'
+import {
+  createContext,
+  useState,
+  useEffect,
+  useContext,
+  useCallback
+} from 'react'
 import {
   iWeatherProviderProps,
   iDaysData,
@@ -11,13 +17,18 @@ const WeatherContext = createContext<iWeatherContextData>(
 )
 
 export default function WeatherProvider({ children }: iWeatherProviderProps) {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [wheater, setWheater] = useState([])
   const [cardActive, setCardActive] = useState(0)
   const [days, setDays] = useState<iDaysData[]>([])
   const [locationValue, setLocationValue] = useState('São Paulo')
-  const changeIndex = (index: number) => {
+  // const changeIndex = (index: number) => {
+  //   setCardActive(index)
+  // }
+
+  const changeIndex = useCallback((index: number) => {
     setCardActive(index)
-  }
+  }, [])
 
   async function loadWheater() {
     await weatherApi

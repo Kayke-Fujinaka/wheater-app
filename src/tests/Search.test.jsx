@@ -2,13 +2,9 @@ import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
 import { Search } from '../components/Search'
 
-jest.mock('../contexts/weather', () => {
-  return {
-    useWheater: () => {
-      return { setLocationValue: jest.fn() }
-    }
-  }
-})
+jest.mock('../contexts/weather', () => ({
+  useWheater: () => ({ setLocationValue: jest.fn() })
+}))
 
 describe('Search Test', () => {
   test('Testing if it can get the "Cidade" text from the label in Search Component', () => {
