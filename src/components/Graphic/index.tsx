@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { Container } from './styles'
 import {
   Chart as ChartJS,
@@ -25,7 +24,6 @@ ChartJS.register(
   Legend
 )
 
-// eslint-disable-next-line react/prop-types
 export function GraphicChart() {
   const { days } = useWheater()
 
@@ -33,25 +31,25 @@ export function GraphicChart() {
     labels: days.map(data => data.day),
     datasets: [
       {
-        label: 'Celsius',
+        label: 'Temperature',
         data: days.map(data => data.temp),
         backgroundColor: ['#f3ba2f'],
         borderColor: 'black',
-        borderWidth: 2
+        borderWidth: 1
       },
       {
         label: 'Humidity',
         data: days.map(data => data.humidity),
         backgroundColor: ['#2a71d0'],
         borderColor: 'black',
-        borderWidth: 2
+        borderWidth: 1
       },
       {
         label: 'Wind speed',
-        data: days.map(data => data.wind),
+        data: days.map(data => data.wind * 3.6),
         backgroundColor: [' #73F054'],
         borderColor: 'black',
-        borderWidth: 2
+        borderWidth: 1
       }
     ]
   }

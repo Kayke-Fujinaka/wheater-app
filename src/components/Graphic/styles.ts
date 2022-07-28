@@ -6,7 +6,7 @@ export const Container = styled.div`
   align-items: center;
   width: 600px;
   height: 15rem;
-  background: var(--text-grey-color);
+  background: #ededed;
   border-radius: 0.3125rem;
   margin: 0 auto;
   margin-bottom: 1.25rem;
@@ -32,5 +32,9 @@ export const Container = styled.div`
 
   @media (max-width: 364px) {
     width: 250px;
+  }
+
+  @media (max-width: 300px) {
+    width: 200px;
   }
 `

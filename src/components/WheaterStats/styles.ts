@@ -19,6 +19,13 @@ export const Stats = styled.div`
     font-weight: var(--bold);
     font-size: var(--bigger-font-size);
   }
+
+  @media (max-width: 530px) {
+    h2 {
+      font-weight: var(--bold);
+      font-size: var(--big-font-size);
+    }
+  }
 `
 export const ImageAling = styled.div`
   display: flex;
