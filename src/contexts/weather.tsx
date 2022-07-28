@@ -1,10 +1,4 @@
-import {
-  createContext,
-  useState,
-  useEffect,
-  useContext,
-  useCallback
-} from 'react'
+import { createContext, useState, useEffect, useContext } from 'react'
 import {
   iWeatherProviderProps,
   iDaysData,
@@ -22,17 +16,13 @@ export default function WeatherProvider({ children }: iWeatherProviderProps) {
   const [cardActive, setCardActive] = useState(0)
   const [days, setDays] = useState<iDaysData[]>([])
   const [locationValue, setLocationValue] = useState('São Paulo')
-  // const changeIndex = (index: number) => {
-  //   setCardActive(index)
-  // }
-
-  const changeIndex = useCallback((index: number) => {
+  const changeIndex = (index: number) => {
     setCardActive(index)
-  }, [])
+  }
 
   async function loadWheater() {
-    await weatherApi
-      .get('data', {
+    try {
+      const { data } = await weatherApi.get('data', {
         params: {
           key: 'cc2ac1d511234aa1a6e63c24ea3c1c77',
           lang: 'pt',
@@ -40,31 +30,30 @@ export default function WeatherProvider({ children }: iWeatherProviderProps) {
           city: locationValue
         }
       })
-      .then(res => {
-        setWheater(res.data)
-
-        const daysData: iDaysData[] = []
-        res.data.data.forEach(
-          (item: {
-            rh: number
-            datetime: string
-            temp: number
-            wind_spd: number
-            weather: { description: string }
-          }) => {
-            const data = {
-              humidity: item.rh,
-              day: item.datetime,
-              temp: item.temp,
-              wind: item.wind_spd,
-              condition: item.weather.description
-            }
-            daysData.push(data)
-            console.log(res)
+      setWheater(data.data)
+      const daysData: iDaysData[] = []
+      data.data.forEach(
+        (item: {
+          rh: number
+          datetime: string
+          temp: number
+          wind_spd: number
+          weather: { description: string }
+        }) => {
+          const dataFilter = {
+            humidity: item.rh,
+            day: item.datetime,
+            temp: item.temp,
+            wind: item.wind_spd,
+            condition: item.weather.description
           }
-        )
-        setDays(daysData)
-      })
+          daysData.push(dataFilter)
+        }
+      )
+      setDays(daysData)
+    } catch (error) {
+      console.log(error)
+    }
   }
   useEffect(() => {
     loadWheater()

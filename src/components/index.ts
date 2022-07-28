@@ -1,5 +1,5 @@
 export { Search } from './Search'
 export { WheaterStats } from './WheaterStats'
 export { WrapperPreview } from './WrapperPreview'
-export { Graphic } from './Graphic'
+export { GraphicChart } from './Graphic'
 export { WheaterPreview } from './WheaterPreview'
