@@ -3,16 +3,16 @@ interface imageConditionRenderProps {
   [key: string]: React.ReactNode
 }
 
-interface testProps {
+interface iCondition {
   condition: string
 }
 
 export function imageConditionRender({
   condition
-}: testProps): React.ReactNode {
+}: iCondition): React.ReactNode {
   const Images: imageConditionRenderProps = {
     'Céu limpo': (
-      <Image src="/sun.svg" width="47" height="30" alt="Wheater Icon" />
+      <Image src="/sun.svg" width="70" height="70" alt="Wheater Icon" />
     ),
     'Poucas nuvens': (
       <Image

@@ -35,7 +35,10 @@ export const WheaterStats = (props: iWheaterStatsProps) => {
         </div>
         <div>
           <h3>Velocidade do Vento</h3>
-          <p> {Math.floor(props.wind * 3.6)} km/h</p>
+          <p>
+            <Image src="/arrowWind.svg" width={25} height={15} />
+            {Math.floor(props.wind * 3.6)} km/h
+          </p>
         </div>
       </S.Footer>
     </S.Container>

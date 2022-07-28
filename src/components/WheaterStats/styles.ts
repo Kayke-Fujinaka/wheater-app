@@ -7,6 +7,7 @@ export const Container = styled.div`
 
 export const Stats = styled.div`
   text-align: center;
+
   h1,
   h2 {
     font-weight: var(--bold);
@@ -50,5 +51,6 @@ export const Footer = styled.div`
 
   p {
     color: var(--text-black-color);
+    font-weight: var(--normal);
   }
 `
