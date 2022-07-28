@@ -24,7 +24,7 @@ export const WheaterStats = (props: iWheaterStatsProps) => {
         <CurrentDataTime />
         <S.ImageAling>
           {imageConditionRender({ condition: props.conditions })}
-          <h2>{Math.floor(props.temperatureCelcius)}°C</h2>
+          <h1>{Math.floor(props.temperatureCelcius)}°C</h1>
         </S.ImageAling>
         <h2>{props.conditions}</h2>
       </S.Stats>

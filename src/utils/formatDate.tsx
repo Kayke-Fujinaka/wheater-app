@@ -1,12 +1,7 @@
-export const formatDate = (date: string) => {
-  const [day, preposition, month] = new Date(date)
-    .toLocaleString('pt-br', {
-      month: 'long',
-      day: 'numeric'
-    })
-    .split(' ')
-  const abbreviatedDayOfTheWeek = `${day} `
-  const formattedDate = [abbreviatedDayOfTheWeek, month]
-
-  return formattedDate.join(`${preposition} `)
+export function formatDate(input) {
+  const datePart = input.match(/\d+/g)
+  const year = datePart[0].substring(2)
+  const month = datePart[1]
+  const day = datePart[2]
+  return day + '/' + month + '/' + year
 }
