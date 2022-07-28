@@ -9,42 +9,21 @@ export default {
     layout: 'fullscreen',
     viewport: {
       viewports: INITIAL_VIEWPORTS
-    },
-    backgrounds: {
-      values: [
-        {
-          name: 'bgColor',
-          value: 'var(--text-grey-color)'
-        }
-      ]
     }
   }
 } as ComponentMeta<typeof WheaterPreview>
 
-interface WheaterPreviewProps {
-  conditions: string
-  className: string
-  day: string
-  humidity: number
-  onClick: () => void
-}
-
-const Template: ComponentStory<typeof WheaterPreview> = (
-  props: WheaterPreviewProps
-) => (
+const Template: ComponentStory<typeof WheaterPreview> = args => (
   <WheaterPreview
-    conditions={props.conditions}
-    className={props.className}
-    day={props.day}
-    humidity={props.humidity}
-    onClick={props.onClick}
+    conditions={'Poucas nuvens'}
+    className={'test-sb'}
+    day={'26/07/2022'}
+    humidity={41}
+    {...args}
   />
 )
 
 export const Default = Template.bind({})
-Default.parameters = {
-  backgrounds: { default: 'bgColor' }
-}
 Default.decorators = [
   Story => (
     <div
@@ -62,8 +41,7 @@ export const Mobile = Template.bind({})
 Mobile.parameters = {
   viewport: {
     defaultViewport: 'iphonex'
-  },
-  backgrounds: { default: 'bgColor' }
+  }
 }
 Mobile.decorators = [
   Story => (
