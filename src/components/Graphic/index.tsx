@@ -33,15 +33,23 @@ export function GraphicChart() {
     labels: days.map(data => data.day),
     datasets: [
       {
+        label: 'Celsius',
+        data: days.map(data => data.temp),
+        backgroundColor: ['#f3ba2f'],
+        borderColor: 'black',
+        borderWidth: 2
+      },
+      {
         label: 'Humidity',
         data: days.map(data => data.humidity),
-        backgroundColor: [
-          'rgba(75,192,192,1)',
-          '#ecf0f1',
-          '#50AF95',
-          '#f3ba2f',
-          '#2a71d0'
-        ],
+        backgroundColor: ['#2a71d0'],
+        borderColor: 'black',
+        borderWidth: 2
+      },
+      {
+        label: 'Wind speed',
+        data: days.map(data => data.wind),
+        backgroundColor: [' #73F054'],
         borderColor: 'black',
         borderWidth: 2
       }

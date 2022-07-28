@@ -51,6 +51,7 @@ export default function WeatherProvider({ children }: iWeatherProviderProps) {
         }
       )
       setDays(daysData)
+      console.log(daysData)
     } catch (error) {
       console.log(error)
     }
