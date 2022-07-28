@@ -26,7 +26,7 @@ export default function WeatherProvider({ children }: iWeatherProviderProps) {
         params: {
           key: 'cc2ac1d511234aa1a6e63c24ea3c1c77',
           lang: 'pt',
-          days: 4,
+          days: 16,
           city: locationValue
         }
       })
