@@ -21,8 +21,24 @@ export default {
   }
 } as ComponentMeta<typeof WheaterPreview>
 
-const Template: ComponentStory<typeof WheaterPreview> = args => (
-  <WheaterPreview {...args} />
+interface WheaterPreviewProps {
+  conditions: string
+  className: string
+  day: string
+  humidity: number
+  onClick: () => void
+}
+
+const Template: ComponentStory<typeof WheaterPreview> = (
+  props: WheaterPreviewProps
+) => (
+  <WheaterPreview
+    conditions={props.conditions}
+    className={props.className}
+    day={props.day}
+    humidity={props.humidity}
+    onClick={props.onClick}
+  />
 )
 
 export const Default = Template.bind({})
