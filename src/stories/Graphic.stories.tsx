@@ -1,19 +1,19 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
-import { Graphic } from '../components/Graphic'
+import { GraphicChart } from '../components/Graphic'
 
 export default {
   title: 'Components/Graphic',
-  component: Graphic,
+  component: GraphicChart,
   parameters: {
     layout: 'fullscreen',
     viewport: {
       viewports: INITIAL_VIEWPORTS
     }
   }
-} as ComponentMeta<typeof Graphic>
+} as ComponentMeta<typeof GraphicChart>
 
-const Template: ComponentStory<typeof Graphic> = () => <Graphic />
+const Template: ComponentStory<typeof GraphicChart> = () => <GraphicChart />
 
 export const Default = Template.bind({})
 
