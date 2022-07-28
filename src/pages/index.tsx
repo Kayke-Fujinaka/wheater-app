@@ -1,6 +1,6 @@
 import React from 'react'
 import { SEO } from '../SEO'
-import { WrapperPreview, Graphic, WheaterStats } from '../components'
+import { WrapperPreview, GraphicChart, WheaterStats } from '../components'
 import { Container } from '../components/Container'
 import { useWheater } from '../contexts/weather'
 
@@ -22,8 +22,7 @@ const Home = () => {
         />
 
         <div>
-          <Graphic />
-
+          <GraphicChart />
           <WrapperPreview cards={days} />
         </div>
       </Container>

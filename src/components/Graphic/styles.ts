@@ -4,12 +4,13 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 600px;
   height: 15rem;
-  background: var(--text-grey-color);
+  background: #ededed;
   border-radius: 0.3125rem;
   margin: 0 auto;
   margin-bottom: 1.25rem;
+  overflow-x: auto;
 
   p {
     font-size: var(--big-font-size);
@@ -19,5 +20,21 @@ export const Container = styled.div`
 
   .cards-wrapper {
     display: flex;
+  }
+
+  @media (max-width: 732px) {
+    width: 450px;
+  }
+
+  @media (max-width: 530px) {
+    width: 300px;
+  }
+
+  @media (max-width: 364px) {
+    width: 250px;
+  }
+
+  @media (max-width: 300px) {
+    width: 200px;
   }
 `

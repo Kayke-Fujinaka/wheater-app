@@ -10,6 +10,6 @@ describe('Token Generator', function () {
   })
 
   test('The data formated', () => {
-    expect(formatDate('2022-07-20')).toBe('19 de julho')
+    expect(formatDate('2022-07-20')).toBe('20 de julho')
   })
 })
