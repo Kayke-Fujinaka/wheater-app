@@ -60,7 +60,6 @@ export default function WeatherProvider({ children }: iWeatherProviderProps) {
               condition: item.weather.description
             }
             daysData.push(data)
-            console.log(res)
           }
         )
         setDays(daysData)
