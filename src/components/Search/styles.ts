@@ -31,7 +31,7 @@ export const Container = styled.div`
 
     input {
       width: 90%;
-      margin-top: 20px;
+      margin-top: 1.25rem;
     }
 
     h3 {

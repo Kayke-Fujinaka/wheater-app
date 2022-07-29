@@ -16,22 +16,22 @@ export const Container = styled.div`
 `
 export const Carrousel = styled.div`
   display: flex;
-  max-width: 600px;
+  max-width: 37.5rem;
   overflow-x: auto;
   scroll-behavior: smooth;
   flex: none;
-  padding-bottom: 20px;
+  padding-bottom: 1.25rem;
   @media (max-width: 720px) {
     margin: 0 auto;
-    max-width: 550px;
+    max-width: 34.375rem;
   }
   @media (max-width: 627px) {
-    max-width: 450px;
+    max-width: 28.125rem;
   }
   @media (max-width: 531px) {
-    max-width: 350px;
+    max-width: 21.875rem;
   }
   @media (max-width: 395px) {
-    max-width: 250px;
+    max-width: 15.625rem;
   }
 `

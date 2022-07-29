@@ -25,20 +25,20 @@ export const Img = styled.div`
 export const Progress = styled.div`
   background: rgba(255, 255, 255, 0.1);
   justify-content: flex-start;
-  border-radius: 100px;
+  border-radius: 6.25rem;
   align-items: center;
   position: relative;
   padding: 0 5px;
   display: flex;
-  height: 40px;
-  width: 500px;
+  height: 2.5rem;
+  width: 31.25rem;
 
   .progress-value {
     animation: load 1s normal forwards;
-    box-shadow: 0 10px 40px -10px #fbbf24;
-    border-radius: 100px;
+    box-shadow: 0 0.625rem 2.5rem -0.625rem #fbbf24;
+    border-radius: 6.25rem;
     background: #fbbf24;
-    height: 30px;
+    height: 1.875rem;
     width: 0;
 
     @keyframes load {
