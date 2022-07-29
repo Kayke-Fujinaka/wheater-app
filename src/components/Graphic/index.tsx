@@ -57,11 +57,10 @@ export function GraphicChart() {
 
   const options = {
     maintainAspectRatio: false,
-    options: {
-      legend: {
-        labels: {
-          fontSize: 25
-        }
+    scales: {},
+    legend: {
+      labels: {
+        fontSize: 25
       }
     }
   }

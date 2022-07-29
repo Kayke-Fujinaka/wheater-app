@@ -3,7 +3,7 @@ import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 import { Container } from '../components/Container'
 
 export default {
-  title: 'Container/Container',
+  title: 'Components/Container',
   component: Container,
   parameters: {
     layout: 'fullscreen',
