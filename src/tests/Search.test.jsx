@@ -51,7 +51,7 @@ describe('Search Test', () => {
     expect(getInput).toHaveAttribute('name', 'search')
   })
 
-  test('Input change', () => {
+  test('Testing if get input value with key "Enter" is "Belo Horizonte"', () => {
     const { getByDisplayValue } = render(<Search />)
     const valueInput = getByDisplayValue(/são paulo/i)
 
@@ -62,7 +62,7 @@ describe('Search Test', () => {
     expect(valueInput.value).toBe('Belo Horizonte')
   })
 
-  test('Input change', () => {
+  test('Testing if get input value with key "a" is "Belo Horizonte"', () => {
     const { getByDisplayValue } = render(<Search />)
     const valueInput = getByDisplayValue(/são paulo/i)
 
