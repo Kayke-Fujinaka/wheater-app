@@ -10,7 +10,7 @@ interface iSearchProps {
   placeholder: string
 }
 
-export function Search(props: iSearchProps) {
+export const Search = (props: iSearchProps) => {
   const { setLocationValue } = useWheater()
   const [inputValue, setInputValue] = useState('São Paulo')
   function handleSubmit(e: { key: string }) {
