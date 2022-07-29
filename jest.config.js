@@ -7,6 +7,8 @@ module.exports = {
     '!src/pages/_app.tsx',
     '!src/pages/_document.tsx',
     '!src/components/index.ts',
+    '!src/components/Graphic/styles.ts',
+    '!src/components/Graphic/index.tsx',
     '!src/components/WrapperPreview/index.tsx',
     '!src/components/WrapperPreview/styles.ts',
     '!src/pages/index.tsx',

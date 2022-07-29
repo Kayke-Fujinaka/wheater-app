@@ -1,18 +1,18 @@
 import Image from 'next/image'
-interface imageConditionRenderProps {
+interface iImageConditionRenderProps {
   [key: string]: React.ReactNode
 }
 
-interface testProps {
+interface iCondition {
   condition: string
 }
 
-export function imageConditionRender({
+export const imageConditionRender = ({
   condition
-}: testProps): React.ReactNode {
-  const Images: imageConditionRenderProps = {
+}: iCondition): React.ReactNode => {
+  const Images: iImageConditionRenderProps = {
     'Céu limpo': (
-      <Image src="/sun.svg" width="47" height="30" alt="Wheater Icon" />
+      <Image src="/sun.svg" width="70" height="70" alt="Wheater Icon" />
     ),
     'Poucas nuvens': (
       <Image

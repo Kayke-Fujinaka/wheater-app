@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 import { GlobalStyle } from '../src/styles/global'
 
 export const parameters = {
@@ -15,7 +15,7 @@ export const decorators = [
   Story => (
     <>
       <GlobalStyle />
-      <Story />
+      {Story()}
     </>
   )
 ]

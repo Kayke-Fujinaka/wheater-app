@@ -1,26 +1,20 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
-import { WheaterPreview } from '../components/WheaterPreview'
+import { CurrentDataTime } from '../components/CurrentDataTime'
 
 export default {
-  title: 'Components/WheaterPreview',
-  component: WheaterPreview,
+  title: 'Components/CurrentDataTime',
+  component: CurrentDataTime,
   parameters: {
     layout: 'fullscreen',
     viewport: {
       viewports: INITIAL_VIEWPORTS
     }
   }
-} as ComponentMeta<typeof WheaterPreview>
+} as ComponentMeta<typeof CurrentDataTime>
 
-const Template: ComponentStory<typeof WheaterPreview> = args => (
-  <WheaterPreview
-    conditions={'Poucas nuvens'}
-    className={'test-sb'}
-    day={'26/07/2022'}
-    humidity={41}
-    {...args}
-  />
+const Template: ComponentStory<typeof CurrentDataTime> = args => (
+  <CurrentDataTime {...args} />
 )
 
 export const Default = Template.bind({})
@@ -29,7 +23,8 @@ Default.decorators = [
     <div
       style={{
         display: 'flex',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        alignItems: 'center'
       }}
     >
       {Story()}
@@ -38,20 +33,21 @@ Default.decorators = [
 ]
 
 export const Mobile = Template.bind({})
-Mobile.parameters = {
-  viewport: {
-    defaultViewport: 'iphonex'
-  }
-}
 Mobile.decorators = [
   Story => (
     <div
       style={{
         display: 'flex',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        alignItems: 'center'
       }}
     >
       {Story()}
     </div>
   )
 ]
+Mobile.parameters = {
+  viewport: {
+    defaultViewport: 'iphonex'
+  }
+}

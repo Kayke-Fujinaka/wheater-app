@@ -13,6 +13,7 @@ import {
 
 import { Bar } from 'react-chartjs-2'
 import { useWheater } from '../../contexts/weather'
+import { formatDate } from '../../utils/formatDate'
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -24,11 +25,11 @@ ChartJS.register(
   Legend
 )
 
-export function GraphicChart() {
+export const GraphicChart = () => {
   const { days } = useWheater()
 
   const datas = {
-    labels: days.map(data => data.day),
+    labels: days.map(data => formatDate(data.day)),
     datasets: [
       {
         label: 'Temperature',

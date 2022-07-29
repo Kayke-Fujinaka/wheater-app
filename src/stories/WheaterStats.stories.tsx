@@ -21,7 +21,14 @@ export default {
   }
 } as ComponentMeta<typeof WheaterStats>
 
-const Template: ComponentStory<typeof WheaterStats> = () => <WheaterStats />
+const Template: ComponentStory<typeof WheaterStats> = () => (
+  <WheaterStats
+    temperatureCelcius={18}
+    humidity={51}
+    wind={13}
+    conditions={'Poucas nuvens'}
+  />
+)
 
 export const Default = Template.bind({})
 Default.parameters = {

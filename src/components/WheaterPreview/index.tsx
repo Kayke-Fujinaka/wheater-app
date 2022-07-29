@@ -1,14 +1,14 @@
 import { imageConditionRender } from '../ImageCondition'
 import { Container } from './styles'
 
-interface WheaterPreviewProps {
+interface iWheaterPreviewProps {
   conditions: string
   className: string
   day: string
   humidity: number
   onClick: () => void
 }
-export const WheaterPreview = (props: WheaterPreviewProps) => {
+export const WheaterPreview = (props: iWheaterPreviewProps) => {
   return (
     <>
       <Container
