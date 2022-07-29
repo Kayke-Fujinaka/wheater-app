@@ -39,10 +39,10 @@ Nesse desafio, você deve construir um site que mostrará o clima em lugares pel
 :heavy_check_mark: Jest dos componentes\
 :heavy_check_mark: Consumo da API\
 :heavy_check_mark: Loading\
-
-:heavy_check_mark: Responsivo\
-:heavy_check_mark: Responsivo\
-:x: Projeto Finalizado
+:heavy_check_mark: Consumindo API\
+:heavy_check_mark: Jest\
+:heavy_check_mark: Storybook\
+:heavy_check_mark: Finalizado\
 
 ## 🚀 Tecnologias
 
@@ -55,10 +55,12 @@ Nesse desafio, você deve construir um site que mostrará o clima em lugares pel
 - [Jest](https://jestjs.io/pt-BR/docs/getting-started)
 - [Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 - [Axios](https://axios-http.com/docs/intro)
+- [Chartjs](https://www.chartjs.org/)
+- [BabelJs](https://babeljs.io/)
 
 ## 📡 API'𝘀 usadas na aplicação
 
-- 🌤 [Wheater API](https://www.weatherapi.com/)
+- 🌤 [Wheaterbit](https://www.weatherbit.io/)
 
 ## :closed_book: Como usar?
 

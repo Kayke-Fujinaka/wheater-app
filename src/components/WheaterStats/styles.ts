@@ -15,7 +15,7 @@ export const Stats = styled.div`
     color: var(--text-black-color);
   }
   h2 {
-    height: 90px;
+    height: 5.625rem;
   }
 
   @media (max-width: 530px) {
