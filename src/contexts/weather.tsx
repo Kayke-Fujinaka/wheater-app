@@ -10,7 +10,7 @@ const WeatherContext = createContext<iWeatherContextData>(
   {} as iWeatherContextData
 )
 
-export default function WeatherProvider({ children }: iWeatherProviderProps) {
+const WeatherProvider = ({ children }: iWeatherProviderProps) => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [wheater, setWheater] = useState([])
   const [cardActive, setCardActive] = useState(0)
@@ -51,7 +51,6 @@ export default function WeatherProvider({ children }: iWeatherProviderProps) {
         }
       )
       setDays(daysData)
-      console.log(daysData)
     } catch (error) {
       console.log(error)
     }
@@ -70,3 +69,4 @@ export default function WeatherProvider({ children }: iWeatherProviderProps) {
 }
 
 export const useWheater = () => useContext(WeatherContext)
+export default WeatherProvider

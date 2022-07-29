@@ -25,7 +25,7 @@ ChartJS.register(
   Legend
 )
 
-export function GraphicChart() {
+export const GraphicChart = () => {
   const { days } = useWheater()
 
   const datas = {
