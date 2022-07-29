@@ -19,11 +19,4 @@ export const ContainerDiv = styled.div`
     width: 90%;
     margin: 2rem auto;
   }
-
-  @media (max-width: 732px) {
-  }
-
-  @media (max-width: 364px) {
-    height: 95rem;
-  }
 `
