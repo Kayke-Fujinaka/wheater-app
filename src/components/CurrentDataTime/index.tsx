@@ -1,5 +1,5 @@
 import { RealTime } from './styles'
-export function CurrentDataTime() {
+export const CurrentDataTime = () => {
   const data = new Date()
   const day = [
     'Domingo',
