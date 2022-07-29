@@ -3,11 +3,11 @@ import { iDaysData } from '../../types/WheaterApiResponse'
 import { formatDate } from '../../utils/formatDate'
 import { WheaterPreview } from '../WheaterPreview'
 import { Container, Carrousel } from './styles'
-interface cardsWrapperProps {
+interface iCardsWrapperProps {
   cards: iDaysData[]
 }
 
-export const WrapperPreview = ({ cards }: cardsWrapperProps) => {
+export const WrapperPreview = ({ cards }: iCardsWrapperProps) => {
   const { changeIndex, cardActive } = useWheater()
 
   return (
