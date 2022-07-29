@@ -7,9 +7,9 @@ interface iCondition {
   condition: string
 }
 
-export function imageConditionRender({
+export const imageConditionRender = ({
   condition
-}: iCondition): React.ReactNode {
+}: iCondition): React.ReactNode => {
   const Images: imageConditionRenderProps = {
     'Céu limpo': (
       <Image src="/sun.svg" width="70" height="70" alt="Wheater Icon" />
