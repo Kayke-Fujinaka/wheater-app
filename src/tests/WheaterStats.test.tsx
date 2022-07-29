@@ -29,19 +29,6 @@ describe('WheaterStats Test', () => {
     expect(getPlaceholder).toBeInTheDocument()
   })
 
-  test('Testing if it can get Image from Wheater Stats Component', () => {
-    const { getByRole } = render(
-      <WheaterStats
-        conditions="Poucas nuvens"
-        temperatureCelcius={21}
-        humidity={44}
-        wind={10}
-      />
-    )
-    const getImg = getByRole('img')
-    expect(getImg).toBeInTheDocument()
-  })
-
   test('Testing manages to get the value of celsius in wheater stats', () => {
     const { getByText } = render(
       <WheaterStats
