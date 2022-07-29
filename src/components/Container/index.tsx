@@ -1,8 +1,8 @@
 import { ContainerDiv } from './styles'
-export type ContainerProps = {
+export interface iContainerProps {
   children: React.ReactNode
 }
 
-export const Container = ({ children }: ContainerProps) => (
+export const Container = ({ children }: iContainerProps) => (
   <ContainerDiv>{children}</ContainerDiv>
 )
