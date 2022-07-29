@@ -1,19 +1,19 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
-import Home from '../pages/index'
+import { LoadingScreen } from '../components/Loading'
 
 export default {
-  title: 'Pages/Home',
-  component: Home,
+  title: 'Components/Loading',
+  component: LoadingScreen,
   parameters: {
     layout: 'fullscreen',
     viewport: {
       viewports: INITIAL_VIEWPORTS
     }
   }
-} as ComponentMeta<typeof Home>
+} as ComponentMeta<typeof LoadingScreen>
 
-const Template: ComponentStory<typeof Home> = () => <Home />
+const Template: ComponentStory<typeof LoadingScreen> = () => <LoadingScreen />
 
 export const Default = Template.bind({})
 
