@@ -9,14 +9,6 @@ export default {
     layout: 'fullscreen',
     viewport: {
       viewports: INITIAL_VIEWPORTS
-    },
-    backgrounds: {
-      values: [
-        {
-          name: 'bgColor',
-          value: 'var(--text-grey-color)'
-        }
-      ]
     }
   }
 } as ComponentMeta<typeof Search>
@@ -24,9 +16,6 @@ export default {
 const Template: ComponentStory<typeof Search> = args => <Search {...args} />
 
 export const Default = Template.bind({})
-Default.parameters = {
-  backgrounds: { default: 'bgColor' }
-}
 Default.args = {
   htmlFor: 'label',
   name: 'search',
@@ -52,8 +41,7 @@ export const Mobile = Template.bind({})
 Mobile.parameters = {
   viewport: {
     defaultViewport: 'iphonex'
-  },
-  backgrounds: { default: 'bgColor' }
+  }
 }
 Mobile.args = {
   htmlFor: 'label',

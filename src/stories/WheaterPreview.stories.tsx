@@ -9,26 +9,21 @@ export default {
     layout: 'fullscreen',
     viewport: {
       viewports: INITIAL_VIEWPORTS
-    },
-    backgrounds: {
-      values: [
-        {
-          name: 'bgColor',
-          value: 'var(--text-grey-color)'
-        }
-      ]
     }
   }
 } as ComponentMeta<typeof WheaterPreview>
 
 const Template: ComponentStory<typeof WheaterPreview> = args => (
-  <WheaterPreview {...args} />
+  <WheaterPreview
+    conditions={'Poucas nuvens'}
+    className={'test-sb'}
+    day={'26/07/2022'}
+    humidity={41}
+    {...args}
+  />
 )
 
 export const Default = Template.bind({})
-Default.parameters = {
-  backgrounds: { default: 'bgColor' }
-}
 Default.decorators = [
   Story => (
     <div
@@ -46,8 +41,7 @@ export const Mobile = Template.bind({})
 Mobile.parameters = {
   viewport: {
     defaultViewport: 'iphonex'
-  },
-  backgrounds: { default: 'bgColor' }
+  }
 }
 Mobile.decorators = [
   Story => (
