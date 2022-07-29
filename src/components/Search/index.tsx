@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useWheater } from '../../contexts/weather'
 import { Container } from './styles'
 
-interface SearchProps {
+interface iSearchProps {
   htmlFor: string
   name: string
   id: string
@@ -10,7 +10,7 @@ interface SearchProps {
   placeholder: string
 }
 
-export function Search(props: SearchProps) {
+export function Search(props: iSearchProps) {
   const { setLocationValue } = useWheater()
   const [inputValue, setInputValue] = useState('São Paulo')
   function handleSubmit(e: { key: string }) {
