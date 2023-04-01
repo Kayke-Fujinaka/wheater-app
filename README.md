@@ -1,50 +1,50 @@
 <h1 align="center">🌤 Wheater App</h1>
 
-<img src="./public/img.jpeg" alt="Descrição da imagem">
+<img src="./public/img.jpeg" alt="Image description">
 
-> 🔎 Um site que consome uma api de clima de tempo.
+> 🔎 A website that consumes a weather weather api.
 
-Confira a aplicação: https://www.linkedin.com/in/kayke-fujinaka/ <br>
+Check out the app: https://www.linkedin.com/in/kayke-fujinaka/ <br>
 
-## :page_facing_up: Explicação
-O projeto é um desafio proposto pelos lideres do Academy no Grupo GCB. Ele foi realizado através de um Pair Programming.
+## :page_facing_up: Explanation
+The project is a challenge proposed by the Academy leaders in the GCB Group. It was performed through a Pair Programming.
 
-O projeto é de um site que apresenta as informações do clima tempo de qualquer parte do mundo, sendo possível a opção de escolher esse local atráves do campo de busca. Ele apresenta a informação de umidade do local em porcentagem, a velocidade do vento, o clima atual do local e quantos graus. Além de aprensentar um icone simulando o tempo.
+The project is for a website that presents weather information from anywhere in the world, with the option of choosing that location through the search field. It displays the location's humidity information in percentage, the wind speed, the current location's weather and how many degrees. In addition to presenting an icon simulating time.
 
-Ele oferece a opção de observar a previsão de alguns dias no futuro. Assim, podendo clicar e mudar para vizualizar as opções futuras. 
+It gives you the option to watch the forecast for a few days in the future. So you can click and switch to view future options.
 
-O gráfico altera conforme o usuário escolha o local desejado ou o dia que desejar ver.
+The graph changes as the user chooses the desired location or the day he wants to see.
 
-Os dados estão sendo consumidos de uma API chamada WheaterAPI a qual oferece alguns serviços para projetos como esse ou até maiores.
+The data is being consumed from an API called WheaterAPI which offers some services for projects like this or even bigger.
 
-## 📁 Páginas
+## 📁 Pages
 
-O site tem uma página, sendo ela:
+The site has one page, which is:
 
-- **Home:** A página principal é a única do projeto e nela apresenta algumas informações, como, por exemplo: um campo de busca que localiza qualquer local do mundo, um seção que apresenta os dados do local escolhido, um gráfico com as informações do local e uma previsão do tempo dos próximos dias do local.
+- **Home:** The main page is the only one of the project and it presents some information, such as: a search field that locates any place in the world, a section that presents the data of the chosen place, a graph with location information and a weather forecast for the next few days of the location.
 
-## ⚔️ Desafio
+## ⚔️ Challenge
 
-Nesse desafio, você deve construir um site que mostrará o clima em lugares pelo mundo! A aplicação deve ser construída utilizando o consumo de uma API que disponibilizará os dados necessários para mostrar no seu site. Um desafio muito bom para aprender todo o contexto de aplicações front-end utilizando o React.
+In this challenge, you have to build a website that will show the weather in places around the world! The application must be built using the consumption of an API that will provide the necessary data to display on your website. A very good challenge to learn the whole context of front-end applications using React.
 
-## 🎯 Etapas
+## 🎯 Steps
 
-:heavy_check_mark: Instalações/Configuração do Projeto\
-:heavy_check_mark: Estruturação dos componentes\
-:heavy_check_mark: Estilização dos componentes\
-:heavy_check_mark: Criando o Layout do Projeto\
-:heavy_check_mark: Responsivo\
-:heavy_check_mark: Funcionalidade ao clicar nos Cards\
-:heavy_check_mark: Storybook dos componentes\
-:heavy_check_mark: Jest dos componentes\
-:heavy_check_mark: Consumo da API\
+:heavy_check_mark: Project Installations/Configuration\
+:heavy_check_mark: Component structuring\
+:heavy_check_mark: Component styling\
+:heavy_check_mark: Creating the Project Layout\
+:heavy_check_mark: Responsive\
+:heavy_check_mark: Functionality when clicking on Cards\
+:heavy_check_mark: Storybook of components\
+:heavy_check_mark: Jest of components\
+:heavy_check_mark: API Consumption\
 :heavy_check_mark: Loading\
-:heavy_check_mark: Consumindo API\
+:heavy_check_mark: Consuming API\
 :heavy_check_mark: Jest\
 :heavy_check_mark: Storybook\
-:heavy_check_mark: Finalizado\
+:heavy_check_mark: Done\
 
-## 🚀 Tecnologias
+## 🚀 Technologies
 
 - [TypeScript](https://www.typescriptlang.org/docs/)
 - [NextJs](https://nextjs.org/docs)
@@ -58,55 +58,55 @@ Nesse desafio, você deve construir um site que mostrará o clima em lugares pel
 - [Chartjs](https://www.chartjs.org/)
 - [BabelJs](https://babeljs.io/)
 
-## 📡 API'𝘀 usadas na aplicação
+## 📡 API'𝘀 used in the application
 
 - 🌤 [Wheaterbit](https://www.weatherbit.io/)
 
-## :closed_book: Como usar?
+## :closed_book: How to use it?
 
-Antes de iniciar, você precisa ter [Git](https://git-scm.com) e [Node](https://nodejs.org/en/) instalados.
+Before starting, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
 
 ```bash
 # Clone this project
 $ git clone https://github.com/Kayke-Fujinaka/Wheather-App
-# Access
+# access
 $ cd wheater-app
-# Install dependencies
+# install dependencies
 $ yarn or npm
 # Run the project
 $ yarn start or npm start
 # The server will initialize in the <http://localhost:3000>
 ```
 
-## 🤝 Colaboradores
+## 🤝 Collaborators
 
-Agradecemos às seguintes pessoas que contribuíram para este projeto:
+Thanks to the following people who contributed to this project:
 
 <table>
   <tr>
     <td align="center">
       <a href="#">
-        <img src="https://avatars.githubusercontent.com/u/98772000?s=400&u=80de9af672be7f75cc7a546838552cf63d5b82fe&v=4" width="160px;" alt="Foto do Kayke Fujinaka no GitHub"/><br>
+        <img src="https://avatars.githubusercontent.com/u/98772000?s=400&u=80de9af672be7f75cc7a546838552cf63d5b82fe&v=4" width="160px;" alt="Photo by Kayke Fujinaka on GitHub"/><br>
         <sub>
           <b>Kayke Fujinaka</b>
         </sub>
       </a>
-    </td>
+    </all>
     <td align="center">
       <a href="#">
-        <img src="https://avatars.githubusercontent.com/u/97638555?v=4" width="160px;" alt="Foto do Ismael da Silva no GitHub"/><br>
+        <img src="https://avatars.githubusercontent.com/u/97638555?v=4" width="160px;" alt="Ismael da Silva's photo on GitHub"/><br>
         <sub>
           <b>Ismael Gomes da Silva</b>
         </sub>
       </a>
-    </td>
+    </all>
   </tr>
 </table>
 
-## 📝 Licença
+## 📝 License
 
-Este projeto está sob licença. Consulte o arquivo [LICENSE](LICENSE.md) para obter mais detalhes.
+This project is under license. See the [LICENSE](LICENSE.md) file for more details.
 
 &#xa0;
 
-<a href="#top">Volte para o topo</a>
+<a href="#top">Go back to top</a>
